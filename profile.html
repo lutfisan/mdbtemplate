@@ -62,7 +62,7 @@
              aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-user"></i>
           </a>
-          <div class="dropdown-menu dropdown-menu-right dropdown-default"
+          <div class="dropdown-menu dropdown-menu-right dropdown-primary"
                aria-labelledby="navbarDropdownMenuLink-333">
             <a class="dropdown-item" href="profile.html">Profile</a>
             <a class="dropdown-item" href="#">Log Out</a>
@@ -96,15 +96,20 @@
             <!-- Card image -->
 
             <!-- Card content -->
-            <div class="card-body card-body-cascade text-center">
-              <img src="#" alt="User Photo" style="width:45%" />
-
-              <p class="text-muted"><small>Profile photo will be changed automatically</small></p>
-              <div class="row flex-center">
-                <button class="btn btn-info btn-rounded btn-sm">Upload New Photo</button><br>
-                <button class="btn btn-danger btn-rounded btn-sm">Delete</button>
+            <form class="md-form">
+              <div class="file-field">
+                <div class="mb-4 text-center">
+                  <img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"
+                       class="rounded-circle z-depth-1-half avatar-pic" alt="example placeholder avatar">
+                </div>
+                <div class="d-flex justify-content-center">
+                  <div class="btn btn-mdb-color btn-rounded float-left">
+                    <span>Add photo</span>
+                    <input type="file">
+                  </div>
+                </div>
               </div>
-            </div>
+            </form>
             <!-- Card content -->
 
           </div>
