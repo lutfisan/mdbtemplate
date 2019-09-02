@@ -16,6 +16,8 @@
     <link href="css/style.css" rel="stylesheet">
     <!-- MDBootstrap Datatables  -->
     <link href="css/addons/datatables.min.css" rel="stylesheet">
+    <!-- Your ipam styles -->
+    <link href="css/addons/ipam.css" rel="stylesheet">
 </head>
 
 <body>
@@ -76,7 +78,7 @@
     <div class="container-fluid mt-2">
         <div class="clearfix">
             <a class="btn btn-primary btn-sm float-left" role="button" href="#"><i class="fas fa-plus pr-1" aria-hidden="true"></i>Add IP</a>
-            <a class="btn btn-primary btn-sm float-left" role="button" href="#"><i class="fas fa-download pr-1" aria-hidden="true"></i>Import</a>
+            <button type="button" class="btn btn-primary btn-sm float-left" data-toggle="modal" data-target="#modalChooseFile"><i class="fas fa-download pr-1" aria-hidden="true"></i>Import</button>
             <a class="btn btn-primary btn-sm float-left" role="button" href="#"><i class="fas fa-upload pr-1" aria-hidden="true"></i>Export</a>
             <!-- BUTTON DROPDOWNS -->
             <div class="dropdown float-right">
@@ -86,14 +88,14 @@
                 <div class="dropdown-menu">
                     <!-- Material inline 1 -->
                     <div class="dropdown-item form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="materialInline1">
-                        <label class="form-check-label" for="materialInline1">Site ID</label>
+                        <input type="checkbox" class="form-check-input" id="cbSiteID">
+                        <label class="form-check-label" for="cbSiteID">Site ID</label>
                     </div>
 
                     <!-- Material inline 2 -->
                     <div class="dropdown-item form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="materialInline2">
-                        <label class="form-check-label" for="materialInline2">Tower Index</label>
+                        <input type="checkbox" class="form-check-input" id="cbTowerIndex">
+                        <label class="form-check-label" for="cbTowerIndex">Tower Index</label>
                     </div>
                     <div class="dropdown-divider"></div>
                     <!-- Search form -->
@@ -461,6 +463,49 @@
     </div>
 </main>
 <!-- Main layout -->
+
+<!--Modal: modalChooseFile-->
+<div class="modal fade" id="modalChooseFile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Header-->
+            <div class="modal-header light-blue darken-3 white-text">
+                <h4 class="title"><i class="fas fa-users"></i> Upload Your IP Data</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body mb-0 text-center">
+
+
+                <form class="md-form" action="#">
+                    <div class="file-field">
+                        <div class="btn blue-gradient btn-sm float-left">
+                            <span><i class="fas fa-cloud-upload-alt mr-2" aria-hidden="true"></i>Choose files</span>
+                            <input type="file">
+                        </div>
+                        <div class="file-path-wrapper mb-3">
+                            <input class="file-path validate" type="text" placeholder="Upload one file">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-sm blue-gradient btn-block btn-rounded z-depth-1a">Submit</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+        <!--/.Content-->
+
+    </div>
+</div>
+<!--Modal: modalChooseFile-->
 
 <!-- Footer -->
 <!-- Footer -->
