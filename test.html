@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  .modal-header, h4, .close {
+    background-color: #0077ff;
+    color:white !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-footer {
+    background-color: #f9f9f9;
+  }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Subnet Editor</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-primary btn-lg" id="myBtn">Edit</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          
+          <h4>Add Subnet</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="area">Area</label>
+              <input type="text" class="form-control" id="area" placeholder="Input Area">
+            </div>
+            <div class="form-group">
+              <label for="ring">Ring</label>
+              <input type="text" class="form-control" id="ring" placeholder="Input Ring">
+            </div>
+            <div class="form-group">
+                <label for="host">Hostname</label>
+                <input type="text" class="form-control" id="host" placeholder="Input Hostname">
+            </div>
+            <div class="form-group">
+              <label for="router">Router Name</label>
+              <input type="text" class="form-control" id="router" placeholder="Input Router">
+            </div>
+            <div class="form-group">
+                <label for="siteid">Site ID</label>
+                <input type="text" class="form-control" id="siteid" placeholder="Input Site ID">
+            </div>
+            <div class="form-group">
+                <label for="tower">Tower Index</label>
+                <input type="text" class="form-control" id="tower" placeholder="Input Tower Index">
+            </div>
+            <div class="form-group">
+                <label for="sitename">Site Name</label>
+                <input type="text" class="form-control" id="sitename" placeholder="Input Site Name">
+            </div>
+            <div class="form-group">
+                <label for="phase">Phase</label>
+                <input type="text" class="form-control" id="phase" placeholder="Input Phase">
+            </div>
+            <div class="form-group">
+                <label for="brl">BSC/RNC/LTE</label>
+                <input type="text" class="form-control" id="brl" placeholder="Input BSC/RNC/LTE">
+            </div>
+            <div class="form-group">
+                <label for="hut">Hut</label>
+                <input type="text" class="form-control" id="hut" placeholder="Input Hut">
+            </div>
+            <div class="form-group">
+                <label for="micro">Microwave Link #1</label>
+                <input type="text" class="form-control" id="micro" placeholder="Input Microwave Link #1">
+            </div>
+            <h3>Abis/IuB/S1</h3>
+            <div class="form-group">
+                <label for="cap1">Cap (Kbps)</label>
+                <input type="text" class="form-control" id="cap1" placeholder="Input Cap (Kbps)">
+            </div>
+            <div class="form-group">
+                <label for="sv1">S-VID</label>
+                <input type="text" class="form-control" id="sv1" placeholder="Input S-VID">
+            </div>
+            <div class="form-group">
+                <label for="cv1">C-VID</label>
+                <input type="text" class="form-control" id="cv1" placeholder="Input C-VID">
+            </div>
+            <div class="form-group">
+                <label for="ipa1">IP Address</label>
+                <input type="text" class="form-control" id="ipa1" placeholder="Input IP Address">
+            </div>
+            <div class="form-group">
+                <label for="ipg1">IP Gateway</label>
+                <input type="text" class="form-control" id="ipg1" placeholder="Input IP Gateway">
+            </div>
+            <div class="form-group">
+                <label for="sub1">Subnet</label>
+                <input type="text" class="form-control" id="sub1" placeholder="Input Subnet">
+            </div>
+            <h3>OAM</h3>
+            <div class="form-group">
+                <label for="cap2">Cap (Kbps)</label>
+                <input type="text" class="form-control" id="cap2" placeholder="Input Cap (Kbps)">
+            </div>
+            <div class="form-group">
+                <label for="sv2">S-VID</label>
+                <input type="text" class="form-control" id="sv2" placeholder="Input S-VID">
+            </div>
+            <div class="form-group">
+                <label for="cv2">C-VID</label>
+                <input type="text" class="form-control" id="cv2" placeholder="Input C-VID">
+            </div>
+            <div class="form-group">
+                <label for="ipa2">IP Address</label>
+                <input type="text" class="form-control" id="ipa2" placeholder="Input IP Address">
+            </div>
+            <div class="form-group">
+                <label for="ipg2">IP Gateway</label>
+                <input type="text" class="form-control" id="ipg2" placeholder="Input IP Gateway">
+            </div>
+            <div class="form-group">
+                <label for="sub2">Subnet</label>
+                <input type="text" class="form-control" id="sub2" placeholder="Input Subnet">
+            </div>
+
+
+
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>I Agree</label>
+            </div>
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-primar pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+</div>
+ 
+<script>
+$(document).ready(function(){
+  $("#myBtn").click(function(){
+    $("#myModal").modal();
+  });
+});
+</script>
+
+</body>
+</html>

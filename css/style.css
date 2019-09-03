@@ -22,3 +22,19 @@ table.dataTable thead .sorting_desc_disabled:before {
 .avatar-pic {
     width: 150px;
 }
+
+/*// Class*/
+.visible {
+    visibility: visible;
+}
+.invisible {
+    visibility: hidden;
+}
+
+/*// Usage as a mixin*/
+.element {
+@include invisible(visible);
+}
+.element {
+@include invisible(hidden);
+}
