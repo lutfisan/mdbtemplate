@@ -20,7 +20,10 @@ table.dataTable thead .sorting_desc_disabled:before {
 }
 
 .avatar-pic {
+    vertical-align: middle;
   width: 150px;
+  height: 170px;
+  border-radius: 50%;
 }
 
 /*// Class*/
