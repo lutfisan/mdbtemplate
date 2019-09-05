@@ -75,6 +75,42 @@
 <main>
     <!-- Main container -->
     <div class="container">
+
+        <!-- Button trigger modal-->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAlreadyEdit">Launch modal</button>
+
+        <!--Modal: modalAlreadyEdit-->
+        <div class="modal fade" id="modalAlreadyEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-notify modal-info" role="document">
+            <!--Content-->
+            <div class="modal-content text-center">
+              <!--Header-->
+              <div class="modal-header d-flex justify-content-center">
+                <p class="heading">Be always up to date</p>
+              </div>
+
+              <!--Body-->
+              <div class="modal-body">
+
+                <i class="fas fa-bell fa-4x animated rotateIn mb-4"></i>
+
+                <p>This IP Address has already reserve by another user</p>
+
+              </div>
+
+              <!--Footer-->
+              <div class="modal-footer flex-center">
+                <a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal">Close</a>
+              </div>
+            </div>
+            <!--/.Content-->
+          </div>
+        </div>
+        <!--Modal: modalAlreadyEdit-->
+
+
+
         <!-- HORIZONTAL CENTERING -->
         <div class="bg-info mx-auto" style="width: 500px;">
             <!-- Card -->
