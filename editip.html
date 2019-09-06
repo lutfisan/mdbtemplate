@@ -14,6 +14,8 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet " href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle/css/bootstrap4-toggle.min.css">
 </head>
 
 <body>
@@ -76,39 +78,43 @@
     <!-- Main container -->
     <div class="container">
 
+        <input type="checkbox" checked data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success"
+               data-offstyle="danger">
+
+
         <!-- Button trigger modal-->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAlreadyEdit">Launch modal</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAlreadyEdit">Launch modal
+        </button>
 
         <!--Modal: modalAlreadyEdit-->
         <div class="modal fade" id="modalAlreadyEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog modal-notify modal-info" role="document">
-            <!--Content-->
-            <div class="modal-content text-center">
-              <!--Header-->
-              <div class="modal-header d-flex justify-content-center">
-                <p class="heading">Be always up to date</p>
-              </div>
+             aria-hidden="true">
+            <div class="modal-dialog modal-notify modal-info" role="document">
+                <!--Content-->
+                <div class="modal-content text-center">
+                    <!--Header-->
+                    <div class="modal-header d-flex justify-content-center">
+                        <p class="heading">Be always up to date</p>
+                    </div>
 
-              <!--Body-->
-              <div class="modal-body">
+                    <!--Body-->
+                    <div class="modal-body">
 
-                <i class="fas fa-bell fa-4x animated rotateIn mb-4"></i>
+                        <i class="fas fa-bell fa-4x animated rotateIn mb-4"></i>
 
-                <p>This IP Address has already reserve by another user</p>
+                        <p>This IP Address has already reserve by another user</p>
 
-              </div>
+                    </div>
 
-              <!--Footer-->
-              <div class="modal-footer flex-center">
-                <a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal">Close</a>
-              </div>
+                    <!--Footer-->
+                    <div class="modal-footer flex-center">
+                        <a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal">Close</a>
+                    </div>
+                </div>
+                <!--/.Content-->
             </div>
-            <!--/.Content-->
-          </div>
         </div>
         <!--Modal: modalAlreadyEdit-->
-
 
 
         <!-- HORIZONTAL CENTERING -->
@@ -121,7 +127,8 @@
 
                 <!-- Avatar -->
                 <div class="avatar mx-auto white">
-                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle" alt="woman avatar">
+                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle"
+                         alt="woman avatar">
                 </div>
 
                 <!-- Content -->
@@ -130,7 +137,8 @@
                     <h4 class="card-title">Anna Doe</h4>
                     <hr>
                     <!-- Quotation -->
-                    <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, adipisci</p>
+                    <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
+                        adipisci</p>
                 </div>
 
             </div>
@@ -150,6 +158,7 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="js/mdb.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle/js/bootstrap4-toggle.min.js"></script>
 </body>
 
 </html>

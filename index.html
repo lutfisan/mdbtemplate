@@ -2,24 +2,24 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Dashboard</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="css/mdb.min.css" rel="stylesheet">
-  <!-- Your custom styles (optional) -->
-  <link href="css/style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- Main navigation -->
-  <header>
+<!-- Main navigation -->
+<header>
     <!--Navbar -->
     <nav class="mb-1 navbar navbar-expand-sm navbar-dark primary-color mb-5">
       <a class="navbar-brand" href="#">IPAM</a>
@@ -68,165 +68,169 @@
       </div>
     </nav>
     <!--/.Navbar -->
-  </header>
-  <!-- Main navigation -->
+</header>
+<!-- Main navigation -->
 
-  <!-- Main layout -->
-  <main>
+<!-- Main layout -->
+<main>
     <!-- Main container -->
     <section class="container">
 
-      <!-- Grid row -->
-      <div class="row">
+        <!-- Grid row -->
+        <div class="row">
 
-        <!-- Grid column -->
-        <div class="col-lg-7 col-md-12">
+            <!-- Grid column -->
+            <div class="col-lg-7 col-md-12">
 
-          <div class="card mb-4">
+                <div class="card mb-4">
 
-            <div class="card-header white-text primary-color">
-              <h6 class="font-weight-500 my-1">Last 5 information logs</h6>
+                    <div class="card-header white-text primary-color">
+                        <h6 class="font-weight-500 my-1">Last 5 information logs</h6>
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="table-responsive">
+
+                            <table class="table large-header">
+
+                                <thead>
+
+                                <tr>
+                                    <th class="font-weight-bold"><strong>User</strong></th>
+                                    <th class="font-weight-bold"><strong>Command</strong></th>
+                                    <th class="font-weight-bold"><strong>Object</strong></th>
+                                    <th class="font-weight-bold"><strong>Date</strong></th>
+                                </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                <tr>
+                                    <td>Admin</td>
+                                    <td>User login</td>
+                                    <td>-</td>
+                                    <td class="hour">
+                        <span class="grey-text float-right">
+                          <i class="far fa-clock-o" aria-hidden="true"></i> 2019-08-26 11:55:00
+                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Admin</td>
+                                    <td>User login</td>
+                                    <td>-</td>
+                                    <td class="hour">
+                        <span class="grey-text float-right">
+                          <i class="far fa-clock-o" aria-hidden="true"></i> 2019-08-26 11:55:00
+                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Admin</td>
+                                    <td>IP Address</td>
+                                    <td>192.168.2.1</td>
+                                    <td class="hour">
+                        <span class="grey-text float-right">
+                          <i class="far fa-clock-o" aria-hidden="true"></i> 2019-08-26 11:55:00
+                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Admin</td>
+                                    <td>User login</td>
+                                    <td>-</td>
+                                    <td class="hour">
+                        <span class="grey-text float-right">
+                          <i class="far fa-clock-o" aria-hidden="true"></i> 2019-08-26 11:55:00
+                        </span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <button
+                                class="btn btn-flat grey lighten-3 btn-rounded waves-effect float-right font-weight-bold btn-dash">
+                            View
+                            full report
+                        </button>
+
+                    </div>
+
+                </div>
+
             </div>
+            <!-- Grid column -->
 
-            <div class="card-body">
+            <!-- Grid column -->
+            <div class="col-lg-5 col-md-12">
 
-              <div class="table-responsive">
+                <div class="card mb-4">
 
-                <table class="table large-header">
+                    <div class="card-header white-text primary-color">
+                        <h6 class="font-weight-500 my-1">Statistics</h6>
+                    </div>
 
-                  <thead>
+                    <div class="card-body">
 
-                  <tr>
-                    <th class="font-weight-bold"><strong>User</strong></th>
-                    <th class="font-weight-bold"><strong>Command</strong></th>
-                    <th class="font-weight-bold"><strong>Object</strong></th>
-                    <th class="font-weight-bold"><strong>Date</strong></th>
-                  </tr>
+                        <table class="table large-header">
 
-                  </thead>
+                            <tbody>
+                            <tr>
+                                <td class="border-top-0">Number of IPv4 addresses</td>
+                                <td class="border-top-0">15</td>
+                            </tr>
+                            <tr>
+                                <td>Number of IPv6 addresses</td>
+                                <td>32</td>
+                            </tr>
+                            <tr>
+                                <td>Number of Subnets</td>
+                                <td>41</td>
+                            </tr>
+                            <tr>
+                                <td>Number of Gateways</td>
+                                <td>14</td>
+                            </tr>
 
-                  <tbody>
+                            </tbody>
+                        </table>
 
-                  <tr>
-                    <td>Admin</td>
-                    <td>User login</td>
-                    <td>-</td>
-                    <td class="hour">
-                        <span class="grey-text float-right">
-                          <i class="far fa-clock-o" aria-hidden="true"></i> 2019-08-26 11:55:00
-                        </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Admin</td>
-                    <td>User login</td>
-                    <td>-</td>
-                    <td class="hour">
-                        <span class="grey-text float-right">
-                          <i class="far fa-clock-o" aria-hidden="true"></i> 2019-08-26 11:55:00
-                        </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Admin</td>
-                    <td>IP Address</td>
-                    <td>192.168.2.1</td>
-                    <td class="hour">
-                        <span class="grey-text float-right">
-                          <i class="far fa-clock-o" aria-hidden="true"></i> 2019-08-26 11:55:00
-                        </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Admin</td>
-                    <td>User login</td>
-                    <td>-</td>
-                    <td class="hour">
-                        <span class="grey-text float-right">
-                          <i class="far fa-clock-o" aria-hidden="true"></i> 2019-08-26 11:55:00
-                        </span>
-                    </td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
+                        <button
+                                class="btn btn-flat grey lighten-3 btn-rounded waves-effect font-weight-bold float-right btn-dash">
+                            View
+                            full report
+                        </button>
 
-              <button
-                      class="btn btn-flat grey lighten-3 btn-rounded waves-effect float-right font-weight-bold btn-dash">View
-                full report</button>
+                    </div>
+
+                </div>
 
             </div>
-
-          </div>
+            <!-- Grid column -->
 
         </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-lg-5 col-md-12">
-
-          <div class="card mb-4">
-
-            <div class="card-header white-text primary-color">
-              <h6 class="font-weight-500 my-1">Statistics</h6>
-            </div>
-
-            <div class="card-body">
-
-              <table class="table large-header">
-
-                <tbody>
-                <tr>
-                  <td class="border-top-0">Number of IPv4 addresses</td>
-                  <td class="border-top-0">15</td>
-                </tr>
-                <tr>
-                  <td>Number of IPv6 addresses</td>
-                  <td>32</td>
-                </tr>
-                <tr>
-                  <td>Number of Subnets</td>
-                  <td>41</td>
-                </tr>
-                <tr>
-                  <td>Number of Gateways</td>
-                  <td>14</td>
-                </tr>
-
-                </tbody>
-              </table>
-
-              <button
-                      class="btn btn-flat grey lighten-3 btn-rounded waves-effect font-weight-bold float-right btn-dash">View
-                full report</button>
-
-            </div>
-
-          </div>
-
-        </div>
-        <!-- Grid column -->
-
-      </div>
-      <!-- Grid row -->
+        <!-- Grid row -->
 
     </section>
     <!-- Main container -->
-  </main>
-  <!-- Main layout -->
+</main>
+<!-- Main layout -->
 
-  <!-- Footer -->
-  <!-- Footer -->
+<!-- Footer -->
+<!-- Footer -->
 
-  <!-- SCRIPTS -->
-  <!-- JQuery -->
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
 </body>
 
 </html>

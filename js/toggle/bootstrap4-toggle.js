@@ -170,12 +170,12 @@
 	// ===============
 
 	$(function() {
-		$('input[type=checkbox][data-toggle^=toggle]').bootstrapToggle()
+		$('input[type=checkbox-toggle][data-toggle^=toggle]').bootstrapToggle()
 	})
 
 	$(document).on('click.bs.toggle', 'div[data-toggle^=toggle]', function(e) {
-		var $checkbox = $(this).find('input[type=checkbox]')
-		$checkbox.bootstrapToggle('toggle')
+		var $checkbox = $(this).find('input[type=checkbox-toggle]')
+		$checkbox-toggle.bootstrapToggle('toggle')
 		e.preventDefault()
 	})
 }(jQuery);

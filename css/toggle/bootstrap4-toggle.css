@@ -19,7 +19,7 @@
 	border-radius: .2rem;
 }
 
-.checkbox label .toggle, .checkbox-inline .toggle {
+.checkbox-toggle label .toggle, .checkbox-inline .toggle {
 	margin-left: -1.25rem;
 	margin-right: .35rem;
 }
@@ -32,7 +32,7 @@
 	/* bootstrap-4 - add a border so toggle is delineated */
 	border-color: rgba(0, 0, 0, .15);
 }
-.toggle input[type="checkbox"] {
+.toggle input[type="checkbox-toggle"] {
 	display: none;
 }
 .toggle-group {
