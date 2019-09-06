@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Admin User Table</title>
+    <title>Administrator</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Bootstrap core CSS -->
@@ -14,6 +14,8 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- MDBootstrap Datatables  -->
+    <link href="css/addons/datatables.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -36,7 +38,12 @@
                     <a class="nav-link" href="ipam.html">IP Manager</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">IP Calculator</a>
+                    <a class="nav-link" href="ipcalc.html">IP Calculator</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Administrator
+                        <span class="sr-only">(current)</span>
+                    </a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto nav-flex-icons">
@@ -75,182 +82,232 @@
 
         <!--Card image-->
         <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
-
-            <a href="" class="white-text mx-auto">User Table</a>
-
+            <a class="white-text mx-auto">User Table</a>
         </div>
         <!--/Card image-->
 
-        <div class="px-4">
+        <div class="container mx-0">
+            <!--Table-->
+            <table id="dtAdmin" class="table table-striped mb-0" cellspacing="0" width="100%">
 
-            <div class="table-responsive">
-                <!--Table-->
-                <table class="table table-hover mb-0">
+                <!--Table head-->
+                <thead>
+                <tr>
+                    <th>
 
-                    <!--Table head-->
-                    <thead>
-                    <tr>
-                        <th>
+                    </th>
+                    <th class="th-sm">Full Name
+                    </th>
+                    <th class="th-sm">Username
+                    </th>
+                    <th class="th-sm">Role
+                    </th>
+                    <th class="th-sm">Active Status
+                    </th>
 
-                        </th>
-                        <th class="th-lg">
-                            <a>Name
-                                <i class="fas fa-sort ml-1"></i>
-                            </a>
-                        </th>
-                        <th class="th-lg">
-                            <a href="">Employee ID
-                                <i class="fas fa-sort ml-1"></i>
-                            </a>
-                        </th>
-                        <th class="th-lg">
-                            <a href="">Username
-                                <i class="fas fa-sort ml-1"></i>
-                            </a>
-                        </th>
-                        <th class="th-lg">
-                            <a href="">Email
-                                <i class="fas fa-sort ml-1"></i>
-                            </a>
-                        </th>
-                        <th class="th-lg">
-                            <a href="">Role
-                                <i class="fas fa-sort ml-1"></i>
-                            </a>
-                        </th>
-                        <th class="th-lg">
-                            <a href="">Active Status
-                                <i class="fas fa-sort ml-1"></i>
-                            </a>
-                        </th>
+                </tr>
+                </thead>
+                <!--Table head-->
 
-                    </tr>
-                    </thead>
-                    <!--Table head-->
+                <!--Table body-->
+                <tbody>
+                <tr>
+                    <th>
+                        <div class="btn-group">
+                            <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
+                                    data-target="#modalEditAdmin"><i class="fas fa-pen fa-xs" aria-hidden="true"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
+                                    data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"
+                                                                         aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </th>
+                    <td>Cantik</td>
+                    <td>cantikuluulu</td>
+                    <td>Admin</td>
+                    <td>Online</td>
 
-                    <!--Table body-->
-                    <tbody>
-                    <tr>
-                        <th>
-                            <div class="btn-group">
-                                <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
-                                        data-target="#modalEdit"><i class="fas fa-pen fa-xs" aria-hidden="true"></i>
-                                </button>
-                                <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
-                                        data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"
-                                                                             aria-hidden="true"></i>
-                                </button>
-                            </div>
-                        </th>
-                        <td>Cantik</td>
-                        <td>14045</td>
-                        <td>cantikuluulu</td>
-                        <td>cantik@banget.com</td>
-                        <td>Admin</td>
-                        <td>Online</td>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="btn-group">
+                            <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
+                                    data-target="#modalEditAdmin"><i class="fas fa-pen fa-xs" aria-hidden="true"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
+                                    data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"
+                                                                         aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </th>
+                    <td>Ganteng</td>
+                    <td>gantengserigala</td>
+                    <td>Operator</td>
+                    <td>Offline</td>
 
-                    </tr>
-                    <tr>
-                        <th>
-                            <div class="btn-group">
-                                <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
-                                        data-target="#modalEdit"><i class="fas fa-pen fa-xs" aria-hidden="true"></i>
-                                </button>
-                                <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
-                                        data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"
-                                                                             aria-hidden="true"></i>
-                                </button>
-                            </div>
-                        </th>
-                        <td>Ganteng</td>
-                        <td>14022</td>
-                        <td>gantengserigala</td>
-                        <td>ganteng@aja.com</td>
-                        <td>Operator</td>
-                        <td>Offline</td>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="btn-group">
+                            <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
+                                    data-target="#modalEditAdmin"><i class="fas fa-pen fa-xs" aria-hidden="true"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
+                                    data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"
+                                                                         aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </th>
+                    <td>Arufin</td>
+                    <td>arufin</td>
+                    <td>Planner</td>
+                    <td>Offline</td>
 
-                    </tr>
-                    <tr>
-                        <th>
-                            <div class="btn-group">
-                                <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
-                                        data-target="#modalEdit"><i class="fas fa-pen fa-xs" aria-hidden="true"></i>
-                                </button>
-                                <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
-                                        data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"
-                                                                             aria-hidden="true"></i>
-                                </button>
-                            </div>
-                        </th>
-                        <td>Arufin</td>
-                        <td>15045</td>
-                        <td>arufin</td>
-                        <td>arufin@arufin.com</td>
-                        <td>Planner</td>
-                        <td>Offline</td>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="btn-group">
+                            <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
+                                    data-target="#modalEditAdmin"><i class="fas fa-pen fa-xs" aria-hidden="true"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
+                                    data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"
+                                                                         aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </th>
+                    <td>Arifin</td>
+                    <td>arifin</td>
+                    <td>Planner</td>
+                    <td>Offline</td>
 
-                    </tr>
-                    <tr>
-                        <th>
-                            <div class="btn-group">
-                                <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
-                                        data-target="#modalEdit"><i class="fas fa-pen fa-xs" aria-hidden="true"></i>
-                                </button>
-                                <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
-                                        data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"
-                                                                             aria-hidden="true"></i>
-                                </button>
-                            </div>
-                        </th>
-                        <td>Arifin</td>
-                        <td>15046</td>
-                        <td>arifin</td>
-                        <td>arifin@arifin.com</td>
-                        <td>Planner</td>
-                        <td>Offline</td>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="btn-group">
+                            <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
+                                    data-target="#modalEditAdmin"><i class="fas fa-pen fa-xs" aria-hidden="true"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
+                                    data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"
+                                                                         aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </th>
+                    <td>Tok Dalang</td>
+                    <td>dalanglah</td>
+                    <td>Admin</td>
+                    <td>Offline</td>
 
-                    </tr>
-                    <tr>
-                        <th>
-                            <div class="btn-group">
-                                <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
-                                        data-target="#modalEdit"><i class="fas fa-pen fa-xs" aria-hidden="true"></i>
-                                </button>
-                                <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button" data-toggle="modal"
-                                        data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"
-                                                                             aria-hidden="true"></i>
-                                </button>
-                            </div>
-                        </th>
-                        <td>Tok Dalang</td>
-                        <td>14821</td>
-                        <td>dalanglah</td>
-                        <td>atok@dalang.com</td>
-                        <td>Admin</td>
-                        <td>Offline</td>
-
-                    </tr>
-                    </tbody>
-                    <!--Table body-->
-                </table>
-                <!--Table-->
-            </div>
-
+                </tr>
+                </tbody>
+                <!--Table body-->
+            </table>
+            <!--Table-->
         </div>
 
     </div>
 </div>
 <!-- Table with panel -->
 
+<!--Modal: modalConfirmDelete-->
+<div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
+        <!--Content-->
+        <div class="modal-content text-center">
+            <!--Header-->
+            <div class="modal-header d-flex justify-content-center">
+                <p class="heading">Are you sure?</p>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body">
+
+                <i class="fas fa-times fa-4x animated rotateIn"></i>
+
+            </div>
+
+            <!--Footer-->
+            <div class="modal-footer flex-center">
+                <a href="#" class="btn  btn-outline-danger">Yes</a>
+                <a type="button" class="btn  btn-danger waves-effect" data-dismiss="modal">No</a>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!--Modal: modalConfirmDelete-->
+
+<!--Modal: modalEditUser-->
+<div class="modal fade bd-example-modal-lg" id="modalEditAdmin" tabindex="-1" role="dialog"
+     aria-labelledby="myModalEdit"
+     aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Header-->
+            <div class="modal-header light-blue darken-3 white-text">
+                <h4 class="title"><i class="fas fa-user-cog"></i>Edit User</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body mb-0 text-center">
+
+                <div class="form-group row">
+                    <label for="editName" class="col-sm-3 col-form-label text-left">Full Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="editName" placeholder="Input Full Name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="editUsername" class="col-sm-3 col-form-label text-left">Username</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="editUsername" placeholder="Input Username">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="editRole" class="col-sm-3 col-form-label text-left">Role</label>
+                    <select class="mdb-select col-sm-9" id="editRole">
+                        <option value="" disabled selected>Select One</option>
+                        <option value="1">Admin</option>
+                        <option value="2">Operator</option>
+                        <option value="3">Planner</option>
+                    </select>
+                </div>
+                <div class="form-group row">
+                    <label for="editStatus" class="col-sm-3 col-form-label text-left">Status</label>
+                    <select class="mdb-select col-sm-9" id="editStatus">
+                        <option value="" disabled selected>Select One</option>
+                        <option value="1">Active</option>
+                        <option value="2">Inactive</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!--Footer-->
+            <div class="modal-footer justify-content-center">
+                <a type="button" class="btn btn-primary waves-effect waves-light">Save
+                    <i class="fas fa-save ml-1"></i>
+                </a>
+                <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Cancel</a>
+            </div>
+
+        </div>
+        <!--/.Content-->
+
+    </div>
+</div>
+<!--Modal: modalEditUser-->
 
 <!-- SCRIPTS -->
-<script>
-function edit(){
-  if(($('checkbox1').is('checked')== true)){
 
-  }
-}
-</script>
 <!-- JQuery -->
 <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 <!-- Bootstrap tooltips -->
@@ -259,6 +316,34 @@ function edit(){
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- MDBootstrap Datatables  -->
+<script type="text/javascript" src="js/addons/datatables.min.js"></script>
+
+<script>
+    // Material Design example
+    $(document).ready(function () {
+        $('#dtAdmin').DataTable({
+            "scrollX": true,
+        });
+        $('#dtAdmin_wrapper').find('label').each(function () {
+            $(this).parent().append($(this).children());
+        });
+        $('#dtAdmin_wrapper .dataTables_filter').find('input').each(function () {
+            $('input').attr("placeholder", "Search");
+            $('input').removeClass('form-control-sm');
+        });
+        $('#dtAdmin_wrapper .dataTables_length').addClass('d-flex flex-row');
+        $('#dtAdmin_wrapper .dataTables_filter').addClass('md-form');
+        $('#dtAdmin_wrapper select').removeClass(
+            'custom-select custom-select-sm form-control form-control-sm');
+        $('#dtAdmin_wrapper select').addClass('mdb-select');
+        $('#dtAdmin_wrapper .mdb-select').materialSelect();
+        $('#dtAdmin_wrapper .dataTables_filter').find('label').remove();
+
+        $('#editStatus').materialSelect();
+        $('#editRole').materialSelect();
+    });
+</script>
 </body>
 
 </html>
