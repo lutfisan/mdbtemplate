@@ -75,106 +75,138 @@
 <main>
     <!-- Main container -->
     <div class="container">
+        
         <!-- HORIZONTAL CENTERING -->
         <div class="bg-info mx-auto" style="width: 400px;">
-        
-        <!-- Card -->
-        <div class="card card-cascade narrower">
 
-        <!-- Card image -->
-        <div class="view view-cascade gradient-card-header mdb-color blue-gradient ">
-          <h5 class="mb-0 font-weight-bold">My Profile</h5>
-        </div>
-        <!-- Card image -->
+            <!-- Card -->
+            <div class="card card-cascade narrower">
 
-        <!-- Card content -->
-        <form class="md-form">
-          
-            <div class="mb-4 text-center">
-              <img src="img/rizky.jpg"
-                   class="rounded-circle avatar-pic" alt="example placeholder avatar" style="width: 150px" style="height: 150px">
-            </div>     
-        </form>
-
-        <div class="modal-body mb-0 text-center">
-
-            <form class="md-form" action="#">
-                <div class="file-field">
-                    <div class="btn blue-gradient btn-sm float-left">
-                        <span><i class="fas fa-cloud-upload-alt mr-2" aria-hidden="true"></i>Choose files</span>
-                        <input type="file">
-                    </div>
-                    <div class="file-path-wrapper mb-3">
-                        <input class="file-path validate" type="text" placeholder="Photo">
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-sm blue-gradient btn-block btn-rounded z-depth-1a">Add photo</button>
-                    </div>
+                <!-- Card image -->
+                <div class="view view-cascade gradient-card-header mdb-color blue-gradient ">
+                    <h5 class="mb-0 font-weight-bold">My Profile</h5>
                 </div>
-            </form>
+                <!-- Card image -->
 
-        </div>
+                <!-- Card content -->
+                <form class="md-form">
 
+                    <div class="mb-4 text-center">
+                        <img src="img/rizky.jpg"
+                             class="rounded-circle avatar-pic" alt="example placeholder avatar" style="width: 150px"
+                             style="height: 150px">
+                    </div>
+                </form>
 
+                <div class="modal-body mb-0 text-center">
 
-        <!-- Card content -->
+                    <form class="md-form" action="#">
+                        <div class="file-field">
+                            <div class="btn blue-gradient btn-sm float-left">
+                                <span><i class="fas fa-cloud-upload-alt mr-2" aria-hidden="true"></i>Choose files</span>
+                                <input type="file">
+                            </div>
+                            <div class="file-path-wrapper mb-3">
+                                <input class="file-path validate" type="text" placeholder="Photo">
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-sm blue-gradient btn-block btn-rounded z-depth-1a">
+                                    Add photo
+                                </button>
+                            </div>
+                        </div>
+                    </form>
 
-
-        <!-- Edit Form -->
-        <form>
-               
-            <!-- First row -->
-            <div class="col-md-auto">
-              <div class="md-form">
-                <input type="text" id="form1" name="form1" class="form-control validate">
-                <label for="form81" data-error="wrong" data-success="right"> Name </label>
-              </div>
-            </div>
-
-                          
-            <!-- Second row -->
-            <div class="col-md-auto">
-              <div class="md-form mb-0">
-                <input type="email" id="form2" name="form2" class="form-control validate">
-                <label for="form76" data-error="wrong" data-success="right">Email address</label>
-              </div>
-            </div>
-
-            
-            <!-- Material input -->
-            <div class="col-md-auto">
-            <div class="md-form mb-0">
-                 <input type="text" id="inputDisabledEx" name="inputDisabledEx" class="form-control" disabled>
-                 <label for="inputDisabledEx" class="disabled">Your Role</label>
-            </div>
-        </div>
-                      
-            <!-- Update Button-->
-            <div class="col-md-12 text-center mb-4">
-                <div class="d-flex justify-content-center">
-              <input type="submit" value="Update Account" class="btn btn-info btn-rounded blue-gradient">
-            </div>
-          </div>
-          
-          
-          
-
-        </form>
-        <!-- Edit Form -->
+                </div>
 
 
-      </div>
-      <!-- Card -->
-                <!-- Content -->
-                
+                <!-- Card content -->
+
+
+                <!-- Edit Form -->
+                <form>
+
+                    <!-- First row -->
+                    <div class="col-md-auto">
+                        <div class="md-form">
+                            <input type="text" id="form1" name="form1" class="form-control validate">
+                            <label for="form1" data-error="wrong" data-success="right"> Name </label>
+                        </div>
+                    </div>
+
+
+                    <!-- Second row -->
+                    <div class="col-md-auto">
+                        <div class="md-form mb-0">
+                            <input type="email" id="form2" name="form2" class="form-control validate">
+                            <label for="form2" data-error="wrong" data-success="right">Email address</label>
+                        </div>
+                    </div>
+
+
+                    <!-- Material input -->
+                    <div class="col-md-auto">
+                        <div class="md-form mb-0">
+                            <input type="text" id="inputDisabledEx" name="inputDisabledEx" class="form-control"
+                                   disabled>
+                            <label for="inputDisabledEx" class="disabled">Your Role</label>
+                        </div>
+                    </div>
+
+                    <!-- Update Button-->
+                    <div class="col-md-12 text-center mb-4">
+                        <div class="d-flex justify-content-center">
+                            <input type="submit" value="Update Account" class="btn btn-info btn-rounded blue-gradient">
+                        </div>
+                    </div>
+
+
+                </form>
+                <!-- Edit Form -->
+
 
             </div>
             <!-- Card -->
+            <!-- Content -->
+
+
         </div>
-    
+        <!-- Card -->
+    </div>
+
     <!-- Main container -->
 </main>
 <!-- Main layout -->
+
+<!--Modal: modalConfrim-->
+<div class="modal fade" id="modalConfrim" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-info" role="document">
+        <!--Content-->
+        <div class="modal-content text-center">
+            <!--Header-->
+            <div class="modal-header d-flex justify-content-center">
+                <p class="heading">Be always up to date</p>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body">
+
+                <i class="fas fa-bell fa-4x animated rotateIn mb-4"></i>
+
+                <p>Congratulation Your profile has been updated</p>
+
+            </div>
+
+            <!--Footer-->
+            <div class="modal-footer flex-center">
+                <a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal">Close</a>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!--Modal: modalConfrim-->
 
 <!-- SCRIPTS -->
 <!-- JQuery -->
