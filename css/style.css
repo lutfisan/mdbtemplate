@@ -19,6 +19,19 @@ table.dataTable thead .sorting_desc_disabled:before {
     bottom: .5em;
 }
 
+.card-img-top{
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+    }
+  
+    .card{
+      margin:auto;
+    }
+
+
 .avatar-pic {
     vertical-align: middle;
   width: 150px;
