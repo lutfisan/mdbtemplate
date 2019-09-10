@@ -83,7 +83,12 @@
             <div class="col-lg-11 col-sm-10">
                 <div class="row">
                     <div class="col">
+                        <!-- Table Navigation -->
                         <div class="clearfix">
+                            <button class="btn btn-primary btn-sm float-left" type="button" data-toggle="modal"
+                                    data-target="#modalReserve">
+                                <i class="fas fa-pen pr-1" aria-hidden="true"></i>Reserve
+                            </button>
                             <button class="btn btn-primary btn-sm float-left" type="button" data-toggle="modal"
                                     data-target="#modalAdd">
                                 <i class="fas fa-plus pr-1" aria-hidden="true"></i>Add IP
@@ -145,10 +150,12 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Table Navigation -->
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
+                        <!-- Table layout -->
                         <table id="dtIPAddress" class="table table-striped table-bordered table-sm" cellspacing="0"
                                width="100%">
                             <thead>
@@ -686,12 +693,14 @@
                             </tbody>
 
                         </table>
+                        <!-- Table layout -->
                     </div>
                 </div>
             </div>
+            <!-- Filter layout -->
             <div class="col-lg-1 col-sm-2 p-0 border rounded border-primary">
-                <div class="alert alert-primary" role="alert">
-                    <i class="fas fa-sliders-h"></i> Filter
+                <div class="alert alert-primary font-weight-bold" role="alert">
+                    <i class="fas fa-sliders-h blue-text pr-2" aria-hidden="true"></i>Filter
                 </div>
 
                 <div class="row mx-auto">
@@ -779,6 +788,7 @@
                 </div>
 
             </div>
+            <!-- Filter layout -->
         </div>
     </div>
 </main>
@@ -1045,7 +1055,7 @@
 
             <!--Footer-->
             <div class="modal-footer justify-content-center">
-                <a type="button" class="btn btn-primary waves-effect waves-light">Reserve
+                <a type="button" class="btn btn-primary waves-effect waves-light">Save
                     <i class="fas fa-save ml-1"></i>
                 </a>
                 <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Cancel</a>
@@ -1270,6 +1280,84 @@
 </div>
 <!--Modal: modalAlreadyEdit-->
 
+<!--Modal: modalReserve-->
+<div class="modal fade" id="modalReserve" tabindex="-1" role="dialog" aria-labelledby="myModalReserve"
+     aria-hidden="true">
+    <div class="modal-dialog cascading-modal modal-fluid" role="document">
+
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Header-->
+            <div class="modal-header light-blue darken-3 white-text">
+                <h4 class="title"><i class="fas fa-database"></i>Reserve per Hostname</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+
+            <!--Body-->
+            <div class="row mx-1">
+                <div class="col-6">
+                    <div class="md-form">
+                        <input type="search" id="form-autocompleteIP" name="form-autocompleteIP" class="form-control mdb-autocomplete">
+                        <button class="mdb-autocomplete-clear">
+                            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24"
+                                 xmlns="https://www.w3.org/2000/svg">
+                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                            </svg>
+                        </button>
+                        <label for="form-autocompleteIP" class="active">Choose your IP Block</label>
+                        <em><small>Type to enable autosuggest</small></em>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <!-- Material input -->
+                    <div class="md-form">
+                        <input type="text" id="inputIPbegin" name="inputIPbegin" class="form-control" disabled value="10.123.122.1">
+                        <label for="inputIPbegin" class="disabled">Range Begin</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-1">
+                <div class="col-6">
+                    <div class="md-form">
+                        <input type="search" id="form-autocompleteHostname" name="form-autocompleteHostname" class="form-control mdb-autocomplete">
+                        <button class="mdb-autocomplete-clear">
+                            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24"
+                                 xmlns="https://www.w3.org/2000/svg">
+                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                            </svg>
+                        </button>
+                        <label for="form-autocompleteHostname" class="active">Choose your Hostname</label>
+                        <em><small>Type to enable autosuggest</small></em>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <!-- Material input -->
+                    <div class="md-form">
+                        <input type="text" id="inputIPend" name="inputIPend" class="form-control" disabled value="10.123.122.16">
+                        <label for="inputIPend" class="disabled">Range End</label>
+                    </div>
+                </div>
+            </div>
+
+            <!--Footer-->
+            <div class="modal-footer justify-content-center">
+                <a type="button" class="btn btn-primary waves-effect waves-light">Reserve
+                    <i class="fas fa-save ml-1"></i>
+                </a>
+                <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Cancel</a>
+            </div>
+
+        </div>
+        <!--/.Content-->
+
+    </div>
+</div>
+<!--Modal: modalReserve-->
+
 <!-- Footer -->
 <!-- Footer -->
 
@@ -1322,6 +1410,70 @@
     $('#filter5').materialSelect();
     $('#filter6').materialSelect();
 
+</script>
+
+<!-- Autocomplete IP block -->
+<script>
+    var states = [
+        "10.123.120.0/28",
+        "10.123.121.0/28",
+        "10.123.122.0/28",
+        "10.123.123.0/28",
+        "10.123.124.0/28",
+        "10.123.125.0/28",
+        "10.123.126.0/28",
+        "10.123.127.0/28",
+        "10.123.128.0/28",
+        "10.123.129.0/28",
+        "10.123.130.0/28",
+        "10.123.131.0/28",
+        "10.123.132.0/28",
+        "10.123.133.0/28",
+        "10.123.134.0/28",
+        "10.123.135.0/28",
+        "10.123.136.0/28",
+        "10.123.145.0/28",
+        "10.123.223.0/28",
+        "10.123.233.0/28",
+        "10.123.183.0/28",
+        "10.123.113.0/28"
+    ];
+
+    $('#form-autocompleteIP').mdbAutocomplete({
+        data: states
+    });
+</script>
+
+<!-- Autocomplete Hostname -->
+<script>
+    var states = [
+        "MA-JK1398-01H",
+        "10.123.121.0/28",
+        "10.123.122.0/28",
+        "10.123.123.0/28",
+        "10.123.124.0/28",
+        "10.123.125.0/28",
+        "10.123.126.0/28",
+        "10.123.127.0/28",
+        "10.123.128.0/28",
+        "10.123.129.0/28",
+        "10.123.130.0/28",
+        "10.123.131.0/28",
+        "10.123.132.0/28",
+        "10.123.133.0/28",
+        "10.123.134.0/28",
+        "10.123.135.0/28",
+        "10.123.136.0/28",
+        "10.123.145.0/28",
+        "10.123.223.0/28",
+        "10.123.233.0/28",
+        "10.123.183.0/28",
+        "10.123.113.0/28"
+    ];
+
+    $('#form-autocompleteHostname').mdbAutocomplete({
+        data: states
+    });
 </script>
 </body>
 
