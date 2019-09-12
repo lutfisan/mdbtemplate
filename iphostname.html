@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Hostname Manager</title>
+    <title>IP Hostname</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Bootstrap core CSS -->
@@ -27,7 +27,7 @@
 <header>
     <!--Navbar -->
     <nav class="mb-1 navbar navbar-expand-sm navbar-dark primary-color mb-5">
-        <a class="navbar-brand" href="index.html">IPAM</a>
+        <a class="navbar-brand" href="#">IPAM</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
                 aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -35,15 +35,26 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Dashboard</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">IP Manager
-                        <span class="sr-only">(current)</span>
+                    <a class="nav-link" href="index.html">Dashboard
                     </a>
                 </li>
+                <!-- Dropdown -->
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">Network</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="ipam.html">IP Manager</a>
+                        <a class="dropdown-item" href="hostam.html">Hostname Manager</a>
+                    </div>
+                </li>
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="ipam.html">IP Manager</a>-->
+<!--                </li>-->
                 <li class="nav-item">
                     <a class="nav-link" href="ipcalc.html">IP Calculator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="administrator.html">Administrator</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto nav-flex-icons">
@@ -78,77 +89,21 @@
 
 <!-- Main layout -->
 <main>
-    <div class="container mt-3">
+    <div class="container-fluid mt-3">
         <div class="row mx-auto">
-            <div class="col-lg-10 col-sm-9">
+            <div class="col-lg-11 col-sm-10">
                 <div class="row">
                     <div class="col">
                         <!-- Table Navigation -->
                         <div class="clearfix">
-                            <!--                            <button class="btn btn-primary btn-sm float-left" type="button" data-toggle="modal"
-                                                                data-target="#modalReserve">
-                                                            <i class="fas fa-pen pr-1" aria-hidden="true"></i>Reserve
-                                                        </button>-->
-<!--                            <button class="btn btn-primary btn-sm float-left" type="button" data-toggle="modal"-->
-<!--                                    data-target="#modalAdd">-->
-<!--                                <i class="fas fa-plus pr-1" aria-hidden="true"></i>Add Hostname-->
-<!--                            </button>-->
-                            <button type="button" class="btn btn-primary btn-sm float-left" data-toggle="modal"
-                                    data-target="#modalChooseFile"><i class="fas fa-download pr-1"
-                                                                      aria-hidden="true"></i>Import
+                            <button class="btn btn-primary btn-sm float-left" type="button" data-toggle="modal"
+                                    data-target="#modalReserve">
+                                <i class="fas fa-pen pr-1" aria-hidden="true"></i>Reserve
                             </button>
-                            <a class="btn btn-primary btn-sm float-left" role="button" href="#"><i
-                                    class="fas fa-upload pr-1"
-                                    aria-hidden="true"></i>Export</a>
-                            <!-- BUTTON DROPDOWNS -->
-                            <!--               <div class="dropdown float-right">
-                                               &lt;!&ndash;Trigger&ndash;&gt;
-                                               <button class="btn btn-primary btn-sm dropdown-toggle" type="button"
-                                                       data-toggle="dropdown">
-                                                   Multi Search
-                                               </button>
-                                               <div class="dropdown-menu" id="dtSearch">
-                                                   &lt;!&ndash; Material inline 1 &ndash;&gt;
-                                                   <div class="dropdown-item form-check form-check-inline">
-                                                       <input type="checkbox" class="form-check-input" id="cbSiteID">
-                                                       <label class="form-check-label" for="cbSiteID">Site ID</label>
-                                                   </div>
-
-                                                   &lt;!&ndash; Material inline 2 &ndash;&gt;
-                                                   <div class="dropdown-item form-check form-check-inline">
-                                                       <input type="checkbox" class="form-check-input" id="cbTowerIndex">
-                                                       <label class="form-check-label" for="cbTowerIndex">Tower Index</label>
-                                                   </div>
-                                                   <div class="dropdown-divider"></div>
-                                                   &lt;!&ndash; Search form &ndash;&gt;
-                                                   <input class="form-control mb-1" type="text" placeholder="Search"
-                                                          aria-label="Search">
-                                                   <input class="form-control mb-1" type="text" placeholder="Search"
-                                                          aria-label="Search">
-                                                   <input class="form-control mb-1" type="text" placeholder="Search"
-                                                          aria-label="Search">
-                                                   <input class="form-control mb-1" type="text" placeholder="Search"
-                                                          aria-label="Search">
-                                                   <input class="form-control mb-1" type="text" placeholder="Search"
-                                                          aria-label="Search">
-                                                   <input class="form-control mb-1" type="text" placeholder="Search"
-                                                          aria-label="Search">
-                                                   <input class="form-control mb-1" type="text" placeholder="Search"
-                                                          aria-label="Search">
-                                                   <input class="form-control mb-1" type="text" placeholder="Search"
-                                                          aria-label="Search">
-
-                                                   <div class="dropdown-divider"></div>
-
-                                                   <div class="btn-group dropdown-item">
-                                                       <input class="btn btn-sm btn-success" type="submit" value="Submit">
-                                                       <input class="btn btn-sm btn-info" type="reset" value="Reset">
-                                                   </div>
-                                                   &lt;!&ndash;                    <a class="dropdown-item" href="#">Link One</a>&ndash;&gt;
-                                                   &lt;!&ndash;                    <a class="dropdown-item" href="#">Link Two</a>&ndash;&gt;
-                                                   &lt;!&ndash;                    <a class="dropdown-item" href="#">Link Three</a>&ndash;&gt;
-                                               </div>
-                                           </div>-->
+                            <button class="btn btn-danger btn-sm float-left" type="button" data-toggle="modal"
+                                    data-target="#modalConfirmRelease">
+                                <i class="fas fa-sign-out-alt pr-1" aria-hidden="true"></i>Release
+                            </button>
                         </div>
                         <!-- Table Navigation -->
                     </div>
@@ -163,11 +118,33 @@
                                 <th class="th-sm"></th>
                                 <th class="th-sm">Area
                                 </th>
-                                <th class="th-sm">Ring
-                                </th>
                                 <th class="th-sm">Hostname
                                 </th>
-                                <th class="th-sm">Status
+                                <th class="th-sm">Router Name
+                                </th>
+                                <th class="th-sm">Site ID
+                                </th>
+                                <th class="th-sm">Tower Index
+                                </th>
+                                <th class="th-sm">S-VID
+                                </th>
+                                <th class="th-sm">C-VID
+                                </th>
+                                <th class="th-sm">IP Address
+                                </th>
+                                <th class="th-sm">IP Gateway
+                                </th>
+                                <th class="th-sm">Subnet
+                                </th>
+                                <th class="th-sm">S-VID
+                                </th>
+                                <th class="th-sm">C-VID
+                                </th>
+                                <th class="th-sm">IP Address
+                                </th>
+                                <th class="th-sm">IP Gateway
+                                </th>
+                                <th class="th-sm">Subnet
                                 </th>
                                 <th class="th-sm">Reserve by
                                 </th>
@@ -176,54 +153,80 @@
                             <tbody>
                             <tr>
                                 <td class="text-center">
-                                    <a href="iphostname.html"><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="bottom"
-                                          title="Detail"></i></a>
-                                    <a><i class="fas fa-times mx-1" data-toggle="modal tooltip" data-placement="bottom" title="Release"
-                                          data-target="#modalConfirmRelease"></i></a>
+                                    <a><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="top"
+                                          title="Tooltip on top"></i></a>
+                                    <a href="ipdetail.html"><i class="fas fa-pen-square mx-1" data-toggle="modal"
+                                          data-target="#modalEdit"></i></a>
+                                    <a><i class="fas fa-times mx-1" data-toggle="modal"
+                                          data-target="#modalConfirmDelete"></i></a>
                                 </td>
-                                <td>Central Java</td>
-                                <td>Central Java Ring 15</td>
-                                <td><a href="iphostname.html" class="text-primary">MA-YGSMN0152-01H</a></td>
-                                <td>Reserve</td>
+                                <td>Jabodetabek</td>
+                                <td>MA-JK0129-01</td>
+                                <td>0129 Sadewa Bekasi</td>
+                                <td>341PL216G_SIU</td>
+                                <td></td>
+                                <td>201</td>
+                                <td>201</td>
+                                <td>10.115.204.19</td>
+                                <td>10.115.204.17</td>
+                                <td>255.255.255.240</td>
+                                <td>1001</td>
+                                <td>1001</td>
+                                <td>10.116.204.19</td>
+                                <td>10.116.204.17</td>
+                                <td>255.255.255.240</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td class="text-center">
-                                    <a href="iphostname.html"><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="bottom"
-                                          title="Detail"></i></a>
-                                    <a><i class="fas fa-times mx-1" data-toggle="modal tooltip" data-placement="bottom" title="Release"
-                                          data-target="#modalConfirmRelease"></i></a>
+                                    <a><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="top"
+                                          title="Tooltip on top"></i></a>
+                                    <a href="ipdetail.html"><i class="fas fa-pen-square mx-1" data-toggle="modal"
+                                          data-target="#modalEdit"></i></a>
+                                    <a><i class="fas fa-times mx-1" data-toggle="modal"
+                                          data-target="#modalConfirmDelete"></i></a>
                                 </td>
                                 <td>Central Java</td>
-                                <td>Central Java Ring 15</td>
-                                <td><a href="iphostname.html" class="text-primary">MA-YGSMN0152-01H</a></td>
-                                <td>Reserve</td>
+                                <td>MA-JK0129-01</td>
+                                <td>0129 Sadewa Bekasi</td>
+                                <td>341PL216G_SIU</td>
+                                <td></td>
+                                <td>201</td>
+                                <td>201</td>
+                                <td>10.115.204.19</td>
+                                <td>10.115.204.17</td>
+                                <td>255.255.255.240</td>
+                                <td>1001</td>
+                                <td>1001</td>
+                                <td>10.116.204.19</td>
+                                <td>10.116.204.17</td>
+                                <td>255.255.255.240</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td class="text-center">
-                                    <a href="iphostname.html"><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="bottom"
-                                          title="Detail"></i></a>
-                                    <a><i class="fas fa-times mx-1" data-toggle="modal tooltip" data-placement="bottom" title="Release"
-                                          data-target="#modalConfirmRelease"></i></a>
+                                    <a><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="top"
+                                          title="Tooltip on top"></i></a>
+                                    <a href="ipdetail.html"><i class="fas fa-pen-square mx-1" data-toggle="modal"
+                                          data-target="#modalEdit"></i></a>
+                                    <a><i class="fas fa-times mx-1" data-toggle="modal"
+                                          data-target="#modalConfirmDelete"></i></a>
                                 </td>
-                                <td>Central Java</td>
-                                <td>Central Java Ring 15</td>
-                                <td><a href="iphostname.html" class="text-primary">MA-YGSMN0152-01H</a></td>
-                                <td>Reserve</td>
+                                <td>Jabodetabek</td>
+                                <td>MA-JK0129-01</td>
+                                <td>0129 Sadewa Bekasi</td>
+                                <td>341PL216G_SIU</td>
                                 <td></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <a href="iphostname.html"><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="bottom"
-                                          title="Detail"></i></a>
-                                    <a><i class="fas fa-times mx-1" data-toggle="modal tooltip" data-placement="bottom" title="Release"
-                                          data-target="#modalConfirmRelease"></i></a>
-                                </td>
-                                <td>Central Java</td>
-                                <td>Central Java Ring 15</td>
-                                <td><a href="iphostname.html" class="text-primary">MA-YGSMN0152-01H</a></td>
-                                <td>Reserve</td>
+                                <td>201</td>
+                                <td>201</td>
+                                <td>10.115.204.19</td>
+                                <td>10.115.204.17</td>
+                                <td>255.255.255.240</td>
+                                <td>1001</td>
+                                <td>1001</td>
+                                <td>10.116.204.19</td>
+                                <td>10.116.204.17</td>
+                                <td>255.255.255.240</td>
                                 <td></td>
                             </tr>
                             </tbody>
@@ -234,7 +237,7 @@
                 </div>
             </div>
             <!-- Filter layout -->
-            <div class="col-lg-2 col-sm-3 p-0 border rounded border-primary" id="changelist-filter">
+            <div class="col-lg-1 col-sm-2 p-0 border rounded border-primary" id="changelist-filter">
                 <div class="alert alert-primary font-weight-bold" role="alert">
                     <i class="fas fa-sliders-h blue-text pr-2" aria-hidden="true"></i>Filter
                 </div>
@@ -323,8 +326,8 @@
                     </div>
                 </div>
 
-                <div class="row mx-auto text-center">
-                    <div class="col mx-auto">
+                <div class="row mx-auto">
+                    <div class="col">
                         <button type="submit" class="btn btn-success btn-sm btn-rounded"><i
                                 class="fas fa-plane pr-2 pt-1" aria-hidden="true"></i>Submit
                         </button>
@@ -410,6 +413,35 @@
     </div>
 </div>
 <!--Modal: modalConfirmRelease-->
+
+<!--Modal: modalConfirmDelete-->
+<div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
+        <!--Content-->
+        <div class="modal-content text-center">
+            <!--Header-->
+            <div class="modal-header d-flex justify-content-center">
+                <p class="heading">Are you sure?</p>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body">
+
+                <i class="fas fa-times fa-4x animated rotateIn"></i>
+
+            </div>
+
+            <!--Footer-->
+            <div class="modal-footer flex-center">
+                <a href="#" class="btn  btn-outline-danger">Yes</a>
+                <a type="button" class="btn  btn-danger waves-effect" data-dismiss="modal">No</a>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!--Modal: modalConfirmDelete-->
 
 <!--Modal: modalEdit-->
 <div class="modal fade bd-example-modal-lg" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalEdit"
@@ -826,21 +858,21 @@
 <!--Modal: modalAlreadyEdit-->
 
 <!--Modal: modalReserve-->
-<!--<div class="modal fade" id="modalReserve" tabindex="-1" role="dialog" aria-labelledby="myModalReserve"
+<div class="modal fade" id="modalReserve" tabindex="-1" role="dialog" aria-labelledby="myModalReserve"
      aria-hidden="true">
     <div class="modal-dialog cascading-modal" role="document">
 
-        &lt;!&ndash;Content&ndash;&gt;
+        <!--Content-->
         <div class="modal-content">
 
-            &lt;!&ndash;Header&ndash;&gt;
+            <!--Header-->
             <div class="modal-header light-blue darken-3 white-text">
                 <h4 class="title"><i class="fas fa-database"></i>Reserve by Hostname</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
 
-            &lt;!&ndash;Body&ndash;&gt;
+            <!--Body-->
             <div class="row mx-1">
                 <div class="col-6">
                     <div class="md-form">
@@ -858,7 +890,7 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    &lt;!&ndash; Material input &ndash;&gt;
+                    <!-- Material input -->
                     <div class="md-form">
                         <input type="text" id="inputIPbegin" name="inputIPbegin" class="form-control" disabled
                                value="10.123.122.1">
@@ -883,7 +915,7 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    &lt;!&ndash; Material input &ndash;&gt;
+                    <!-- Material input -->
                     <div class="md-form">
                         <input type="text" id="inputIPend" name="inputIPend" class="form-control" disabled
                                value="10.123.122.16">
@@ -892,7 +924,7 @@
                 </div>
             </div>
 
-            &lt;!&ndash;Footer&ndash;&gt;
+            <!--Footer-->
             <div class="modal-footer justify-content-center">
                 <a type="button" class="btn btn-primary waves-effect waves-light">Reserve
                     <i class="fas fa-save ml-1"></i>
@@ -901,10 +933,10 @@
             </div>
 
         </div>
-        &lt;!&ndash;/.Content&ndash;&gt;
+        <!--/.Content-->
 
     </div>
-</div-->>
+</div>
 <!--Modal: modalReserve-->
 
 <!-- Footer -->
