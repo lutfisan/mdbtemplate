@@ -78,21 +78,21 @@
 
 <!-- Main layout -->
 <main>
-    <div class="container-fluid mt-3">
+    <div class="container mt-3">
         <div class="row mx-auto">
-            <div class="col-lg-11 col-sm-10">
+            <div class="col-lg-10 col-sm-9">
                 <div class="row">
                     <div class="col">
                         <!-- Table Navigation -->
                         <div class="clearfix">
-                            <button class="btn btn-primary btn-sm float-left" type="button" data-toggle="modal"
-                                    data-target="#modalReserve">
-                                <i class="fas fa-pen pr-1" aria-hidden="true"></i>Reserve
-                            </button>
-                            <button class="btn btn-primary btn-sm float-left" type="button" data-toggle="modal"
+                            <!--                            <button class="btn btn-primary btn-sm float-left" type="button" data-toggle="modal"
+                                                                data-target="#modalReserve">
+                                                            <i class="fas fa-pen pr-1" aria-hidden="true"></i>Reserve
+                                                        </button>-->
+                            <!--<button class="btn btn-primary btn-sm float-left" type="button" data-toggle="modal"
                                     data-target="#modalAdd">
-                                <i class="fas fa-plus pr-1" aria-hidden="true"></i>Add IP
-                            </button>
+                                <i class="fas fa-plus pr-1" aria-hidden="true"></i>Add Hostname
+                            </button>-->
                             <button type="button" class="btn btn-primary btn-sm float-left" data-toggle="modal"
                                     data-target="#modalChooseFile"><i class="fas fa-download pr-1"
                                                                       aria-hidden="true"></i>Import
@@ -101,54 +101,54 @@
                                     class="fas fa-upload pr-1"
                                     aria-hidden="true"></i>Export</a>
                             <!-- BUTTON DROPDOWNS -->
-                            <div class="dropdown float-right">
-                                <!--Trigger-->
-                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button"
-                                        data-toggle="dropdown">
-                                    Multi Search
-                                </button>
-                                <div class="dropdown-menu" id="dtSearch">
-                                    <!-- Material inline 1 -->
-                                    <div class="dropdown-item form-check form-check-inline">
-                                        <input type="checkbox" class="form-check-input" id="cbSiteID">
-                                        <label class="form-check-label" for="cbSiteID">Site ID</label>
-                                    </div>
+                            <!--               <div class="dropdown float-right">
+                                               &lt;!&ndash;Trigger&ndash;&gt;
+                                               <button class="btn btn-primary btn-sm dropdown-toggle" type="button"
+                                                       data-toggle="dropdown">
+                                                   Multi Search
+                                               </button>
+                                               <div class="dropdown-menu" id="dtSearch">
+                                                   &lt;!&ndash; Material inline 1 &ndash;&gt;
+                                                   <div class="dropdown-item form-check form-check-inline">
+                                                       <input type="checkbox" class="form-check-input" id="cbSiteID">
+                                                       <label class="form-check-label" for="cbSiteID">Site ID</label>
+                                                   </div>
 
-                                    <!-- Material inline 2 -->
-                                    <div class="dropdown-item form-check form-check-inline">
-                                        <input type="checkbox" class="form-check-input" id="cbTowerIndex">
-                                        <label class="form-check-label" for="cbTowerIndex">Tower Index</label>
-                                    </div>
-                                    <div class="dropdown-divider"></div>
-                                    <!-- Search form -->
-                                    <input class="form-control mb-1" type="text" placeholder="Search"
-                                           aria-label="Search">
-                                    <input class="form-control mb-1" type="text" placeholder="Search"
-                                           aria-label="Search">
-                                    <input class="form-control mb-1" type="text" placeholder="Search"
-                                           aria-label="Search">
-                                    <input class="form-control mb-1" type="text" placeholder="Search"
-                                           aria-label="Search">
-                                    <input class="form-control mb-1" type="text" placeholder="Search"
-                                           aria-label="Search">
-                                    <input class="form-control mb-1" type="text" placeholder="Search"
-                                           aria-label="Search">
-                                    <input class="form-control mb-1" type="text" placeholder="Search"
-                                           aria-label="Search">
-                                    <input class="form-control mb-1" type="text" placeholder="Search"
-                                           aria-label="Search">
+                                                   &lt;!&ndash; Material inline 2 &ndash;&gt;
+                                                   <div class="dropdown-item form-check form-check-inline">
+                                                       <input type="checkbox" class="form-check-input" id="cbTowerIndex">
+                                                       <label class="form-check-label" for="cbTowerIndex">Tower Index</label>
+                                                   </div>
+                                                   <div class="dropdown-divider"></div>
+                                                   &lt;!&ndash; Search form &ndash;&gt;
+                                                   <input class="form-control mb-1" type="text" placeholder="Search"
+                                                          aria-label="Search">
+                                                   <input class="form-control mb-1" type="text" placeholder="Search"
+                                                          aria-label="Search">
+                                                   <input class="form-control mb-1" type="text" placeholder="Search"
+                                                          aria-label="Search">
+                                                   <input class="form-control mb-1" type="text" placeholder="Search"
+                                                          aria-label="Search">
+                                                   <input class="form-control mb-1" type="text" placeholder="Search"
+                                                          aria-label="Search">
+                                                   <input class="form-control mb-1" type="text" placeholder="Search"
+                                                          aria-label="Search">
+                                                   <input class="form-control mb-1" type="text" placeholder="Search"
+                                                          aria-label="Search">
+                                                   <input class="form-control mb-1" type="text" placeholder="Search"
+                                                          aria-label="Search">
 
-                                    <div class="dropdown-divider"></div>
+                                                   <div class="dropdown-divider"></div>
 
-                                    <div class="btn-group dropdown-item">
-                                        <input class="btn btn-sm btn-success" type="submit" value="Submit">
-                                        <input class="btn btn-sm btn-info" type="reset" value="Reset">
-                                    </div>
-                                    <!--                    <a class="dropdown-item" href="#">Link One</a>-->
-                                    <!--                    <a class="dropdown-item" href="#">Link Two</a>-->
-                                    <!--                    <a class="dropdown-item" href="#">Link Three</a>-->
-                                </div>
-                            </div>
+                                                   <div class="btn-group dropdown-item">
+                                                       <input class="btn btn-sm btn-success" type="submit" value="Submit">
+                                                       <input class="btn btn-sm btn-info" type="reset" value="Reset">
+                                                   </div>
+                                                   &lt;!&ndash;                    <a class="dropdown-item" href="#">Link One</a>&ndash;&gt;
+                                                   &lt;!&ndash;                    <a class="dropdown-item" href="#">Link Two</a>&ndash;&gt;
+                                                   &lt;!&ndash;                    <a class="dropdown-item" href="#">Link Three</a>&ndash;&gt;
+                                               </div>
+                                           </div>-->
                         </div>
                         <!-- Table Navigation -->
                     </div>
@@ -167,6 +167,8 @@
                                 </th>
                                 <th class="th-sm">Hostname
                                 </th>
+                                <th class="th-sm">Status
+                                </th>
                                 <th class="th-sm">Reserve by
                                 </th>
                             </tr>
@@ -174,340 +176,54 @@
                             <tbody>
                             <tr>
                                 <td class="text-center">
-                                    <!--                                    <div class="btn-group">-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalEdit"><i class="fas fa-pen fa-xs"-->
-                                    <!--                                                                            aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"-->
-                                    <!--                                                                                     aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                    </div>-->
-                                    <a><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="top"
-                                          title="Tooltip on top"></i></a>
-                                    <a><i class="fas fa-pen-square mx-1" data-toggle="modal"
-                                          data-target="#modalEdit"></i></a>
-                                    <a><i class="fas fa-times mx-1" data-toggle="modal"
-                                          data-target="#modalConfirmDelete"></i></a>
+                                    <a href="#"><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="bottom"
+                                          title="Detail"></i></a>
+                                    <a><i class="fas fa-times mx-1" data-toggle="modal tooltip" data-placement="bottom" title="Release"
+                                          data-target="#modalConfirmRelease"></i></a>
                                 </td>
                                 <td>Central Java</td>
                                 <td>Central Java Ring 15</td>
-                                <td>MA-YGSMN0152-01H</td>
+                                <td><a href="#" class="text-primary">MA-YGSMN0152-01H</a></td>
+                                <td>Reserve</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td class="text-center">
-                                    <!--                                    <div class="btn-group">-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalEdit"><i class="fas fa-pen fa-xs"-->
-                                    <!--                                                                            aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"-->
-                                    <!--                                                                                     aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                    </div>-->
-                                    <a><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="top"
-                                          title="Tooltip on top"></i></a>
-                                    <a><i class="fas fa-pen-square mx-1" data-toggle="modal"
-                                          data-target="#modalEdit"></i></a>
-                                    <a><i class="fas fa-times mx-1" data-toggle="modal"
-                                          data-target="#modalConfirmDelete"></i></a>
+                                    <a href="#"><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="bottom"
+                                          title="Detail"></i></a>
+                                    <a><i class="fas fa-times mx-1" data-toggle="modal tooltip" data-placement="bottom" title="Release"
+                                          data-target="#modalConfirmRelease"></i></a>
                                 </td>
                                 <td>Central Java</td>
                                 <td>Central Java Ring 15</td>
-                                <td>MA-YGSMN0152-01H</td>
+                                <td><a href="#" class="text-primary">MA-YGSMN0152-01H</a></td>
+                                <td>Reserve</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td class="text-center">
-                                    <!--                                    <div class="btn-group">-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalEdit"><i class="fas fa-pen fa-xs"-->
-                                    <!--                                                                            aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"-->
-                                    <!--                                                                                     aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                    </div>-->
-                                    <a><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="top"
-                                          title="Tooltip on top"></i></a>
-                                    <a><i class="fas fa-pen-square mx-1" data-toggle="modal"
-                                          data-target="#modalEdit"></i></a>
-                                    <a><i class="fas fa-times mx-1" data-toggle="modal"
-                                          data-target="#modalConfirmDelete"></i></a>
+                                    <a href="#"><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="bottom"
+                                          title="Detail"></i></a>
+                                    <a><i class="fas fa-times mx-1" data-toggle="modal tooltip" data-placement="bottom" title="Release"
+                                          data-target="#modalConfirmRelease"></i></a>
                                 </td>
                                 <td>Central Java</td>
                                 <td>Central Java Ring 15</td>
-                                <td>MA-YGSMN0152-01H</td>
+                                <td><a href="#" class="text-primary">MA-YGSMN0152-01H</a></td>
+                                <td>Reserve</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td class="text-center">
-                                    <!--                                    <div class="btn-group">-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalEdit"><i class="fas fa-pen fa-xs"-->
-                                    <!--                                                                            aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"-->
-                                    <!--                                                                                     aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                    </div>-->
-                                    <a><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="top"
-                                          title="Tooltip on top"></i></a>
-                                    <a><i class="fas fa-pen-square mx-1" data-toggle="modal"
-                                          data-target="#modalEdit"></i></a>
-                                    <a><i class="fas fa-times mx-1" data-toggle="modal"
-                                          data-target="#modalConfirmDelete"></i></a>
+                                    <a href="#"><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="bottom"
+                                          title="Detail"></i></a>
+                                    <a><i class="fas fa-times mx-1" data-toggle="modal tooltip" data-placement="bottom" title="Release"
+                                          data-target="#modalConfirmRelease"></i></a>
                                 </td>
                                 <td>Central Java</td>
                                 <td>Central Java Ring 15</td>
-                                <td>MA-YGSMN0152-01H</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <!--                                    <div class="btn-group">-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalEdit"><i class="fas fa-pen fa-xs"-->
-                                    <!--                                                                            aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"-->
-                                    <!--                                                                                     aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                    </div>-->
-                                    <a><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="top"
-                                          title="Tooltip on top"></i></a>
-                                    <a><i class="fas fa-pen-square mx-1" data-toggle="modal"
-                                          data-target="#modalEdit"></i></a>
-                                    <a><i class="fas fa-times mx-1" data-toggle="modal"
-                                          data-target="#modalConfirmDelete"></i></a>
-                                </td>
-                                <td>Central Java</td>
-                                <td>Central Java Ring 15</td>
-                                <td>MA-YGSMN0152-01H</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <!--                                    <div class="btn-group">-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalEdit"><i class="fas fa-pen fa-xs"-->
-                                    <!--                                                                            aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"-->
-                                    <!--                                                                                     aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                    </div>-->
-                                    <a><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="top"
-                                          title="Tooltip on top"></i></a>
-                                    <a><i class="fas fa-pen-square mx-1" data-toggle="modal"
-                                          data-target="#modalEdit"></i></a>
-                                    <a><i class="fas fa-times mx-1" data-toggle="modal"
-                                          data-target="#modalConfirmDelete"></i></a>
-                                </td>
-                                <td>Central Java</td>
-                                <td>Central Java Ring 15</td>
-                                <td>MA-YGSMN0152-01H</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <!--                                    <div class="btn-group">-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalEdit"><i class="fas fa-pen fa-xs"-->
-                                    <!--                                                                            aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"-->
-                                    <!--                                                                                     aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                    </div>-->
-                                    <a><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="top"
-                                          title="Tooltip on top"></i></a>
-                                    <a><i class="fas fa-pen-square mx-1" data-toggle="modal"
-                                          data-target="#modalEdit"></i></a>
-                                    <a><i class="fas fa-times mx-1" data-toggle="modal"
-                                          data-target="#modalConfirmDelete"></i></a>
-                                </td>
-                                <td>Central Java</td>
-                                <td>Central Java Ring 15</td>
-                                <td>MA-YGSMN0152-01H</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <!--                                    <div class="btn-group">-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalEdit"><i class="fas fa-pen fa-xs"-->
-                                    <!--                                                                            aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"-->
-                                    <!--                                                                                     aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                    </div>-->
-                                    <a><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="top"
-                                          title="Tooltip on top"></i></a>
-                                    <a><i class="fas fa-pen-square mx-1" data-toggle="modal"
-                                          data-target="#modalEdit"></i></a>
-                                    <a><i class="fas fa-times mx-1" data-toggle="modal"
-                                          data-target="#modalConfirmDelete"></i></a>
-                                </td>
-                                <td>Central Java</td>
-                                <td>Central Java Ring 15</td>
-                                <td>MA-YGSMN0152-01H</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <!--                                    <div class="btn-group">-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalEdit"><i class="fas fa-pen fa-xs"-->
-                                    <!--                                                                            aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"-->
-                                    <!--                                                                                     aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                    </div>-->
-                                    <a><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="top"
-                                          title="Tooltip on top"></i></a>
-                                    <a><i class="fas fa-pen-square mx-1" data-toggle="modal"
-                                          data-target="#modalEdit"></i></a>
-                                    <a><i class="fas fa-times mx-1" data-toggle="modal"
-                                          data-target="#modalConfirmDelete"></i></a>
-                                </td>
-                                <td>Central Java</td>
-                                <td>Central Java Ring 15</td>
-                                <td>MA-YGSMN0152-01H</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <!--                                    <div class="btn-group">-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalEdit"><i class="fas fa-pen fa-xs"-->
-                                    <!--                                                                            aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"-->
-                                    <!--                                                                                     aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                    </div>-->
-                                    <a><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="top"
-                                          title="Tooltip on top"></i></a>
-                                    <a><i class="fas fa-pen-square mx-1" data-toggle="modal"
-                                          data-target="#modalEdit"></i></a>
-                                    <a><i class="fas fa-times mx-1" data-toggle="modal"
-                                          data-target="#modalConfirmDelete"></i></a>
-                                </td>
-                                <td>Central Java</td>
-                                <td>Central Java Ring 15</td>
-                                <td>MA-YGSMN0152-01H</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <!--                                    <div class="btn-group">-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalEdit"><i class="fas fa-pen fa-xs"-->
-                                    <!--                                                                            aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"-->
-                                    <!--                                                                                     aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                    </div>-->
-                                    <a><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="top"
-                                          title="Tooltip on top"></i></a>
-                                    <a><i class="fas fa-pen-square mx-1" data-toggle="modal"
-                                          data-target="#modalEdit"></i></a>
-                                    <a><i class="fas fa-times mx-1" data-toggle="modal"
-                                          data-target="#modalConfirmDelete"></i></a>
-                                </td>
-                                <td>Central Java</td>
-                                <td>Central Java Ring 15</td>
-                                <td>MA-YGSMN0152-01H</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <!--                                    <div class="btn-group">-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalEdit"><i class="fas fa-pen fa-xs"-->
-                                    <!--                                                                            aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"-->
-                                    <!--                                                                                     aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                    </div>-->
-                                    <a><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="top"
-                                          title="Tooltip on top"></i></a>
-                                    <a><i class="fas fa-pen-square mx-1" data-toggle="modal"
-                                          data-target="#modalEdit"></i></a>
-                                    <a><i class="fas fa-times mx-1" data-toggle="modal"
-                                          data-target="#modalConfirmDelete"></i></a>
-                                </td>
-                                <td>Central Java</td>
-                                <td>Central Java Ring 15</td>
-                                <td>MA-YGSMN0152-01H</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <!--                                    <div class="btn-group">-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalEdit"><i class="fas fa-pen fa-xs"-->
-                                    <!--                                                                            aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                        <button class="btn btn-primary btn-sm px-1 py-0 m-0" type="button"-->
-                                    <!--                                                data-toggle="modal"-->
-                                    <!--                                                data-target="#modalConfirmDelete"><i class="fas fa-times fa-xs"-->
-                                    <!--                                                                                     aria-hidden="true"></i>-->
-                                    <!--                                        </button>-->
-                                    <!--                                    </div>-->
-                                    <a><i class="fas fa-info mx-1" data-toggle="tooltip" data-placement="top"
-                                          title="Tooltip on top"></i></a>
-                                    <a><i class="fas fa-pen-square mx-1" data-toggle="modal"
-                                          data-target="#modalEdit"></i></a>
-                                    <a><i class="fas fa-times mx-1" data-toggle="modal"
-                                          data-target="#modalConfirmDelete"></i></a>
-                                </td>
-                                <td>Central Java</td>
-                                <td>Central Java Ring 15</td>
-                                <td>MA-YGSMN0152-01H</td>
+                                <td><a href="#" class="text-primary">MA-YGSMN0152-01H</a></td>
+                                <td>Reserve</td>
                                 <td></td>
                             </tr>
                             </tbody>
@@ -518,7 +234,7 @@
                 </div>
             </div>
             <!-- Filter layout -->
-            <div class="col-lg-1 col-sm-2 p-0 border rounded border-primary" id="changelist-filter">
+            <div class="col-lg-2 col-sm-3 p-0 border rounded border-primary" id="changelist-filter">
                 <div class="alert alert-primary font-weight-bold" role="alert">
                     <i class="fas fa-sliders-h blue-text pr-2" aria-hidden="true"></i>Filter
                 </div>
@@ -607,6 +323,14 @@
                     </div>
                 </div>
 
+                <div class="row mx-auto text-center">
+                    <div class="col mx-auto">
+                        <button type="submit" class="btn btn-success btn-sm btn-rounded"><i
+                                class="fas fa-plane pr-2 pt-1" aria-hidden="true"></i>Submit
+                        </button>
+                    </div>
+                </div>
+
             </div>
             <!-- Filter layout -->
         </div>
@@ -658,8 +382,8 @@
 </div>
 <!--Modal: modalChooseFile-->
 
-<!--Modal: modalConfirmDelete-->
-<div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<!--Modal: modalConfirmRelease-->
+<div class="modal fade" id="modalConfirmRelease" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
     <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
         <!--Content-->
@@ -685,7 +409,7 @@
         <!--/.Content-->
     </div>
 </div>
-<!--Modal: modalConfirmDelete-->
+<!--Modal: modalConfirmRelease-->
 
 <!--Modal: modalEdit-->
 <div class="modal fade bd-example-modal-lg" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalEdit"
@@ -1102,21 +826,21 @@
 <!--Modal: modalAlreadyEdit-->
 
 <!--Modal: modalReserve-->
-<div class="modal fade" id="modalReserve" tabindex="-1" role="dialog" aria-labelledby="myModalReserve"
+<!--<div class="modal fade" id="modalReserve" tabindex="-1" role="dialog" aria-labelledby="myModalReserve"
      aria-hidden="true">
     <div class="modal-dialog cascading-modal" role="document">
 
-        <!--Content-->
+        &lt;!&ndash;Content&ndash;&gt;
         <div class="modal-content">
 
-            <!--Header-->
+            &lt;!&ndash;Header&ndash;&gt;
             <div class="modal-header light-blue darken-3 white-text">
                 <h4 class="title"><i class="fas fa-database"></i>Reserve by Hostname</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
 
-            <!--Body-->
+            &lt;!&ndash;Body&ndash;&gt;
             <div class="row mx-1">
                 <div class="col-6">
                     <div class="md-form">
@@ -1134,7 +858,7 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <!-- Material input -->
+                    &lt;!&ndash; Material input &ndash;&gt;
                     <div class="md-form">
                         <input type="text" id="inputIPbegin" name="inputIPbegin" class="form-control" disabled
                                value="10.123.122.1">
@@ -1159,7 +883,7 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <!-- Material input -->
+                    &lt;!&ndash; Material input &ndash;&gt;
                     <div class="md-form">
                         <input type="text" id="inputIPend" name="inputIPend" class="form-control" disabled
                                value="10.123.122.16">
@@ -1168,7 +892,7 @@
                 </div>
             </div>
 
-            <!--Footer-->
+            &lt;!&ndash;Footer&ndash;&gt;
             <div class="modal-footer justify-content-center">
                 <a type="button" class="btn btn-primary waves-effect waves-light">Reserve
                     <i class="fas fa-save ml-1"></i>
@@ -1177,10 +901,10 @@
             </div>
 
         </div>
-        <!--/.Content-->
+        &lt;!&ndash;/.Content&ndash;&gt;
 
     </div>
-</div>
+</div-->>
 <!--Modal: modalReserve-->
 
 <!-- Footer -->
