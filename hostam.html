@@ -85,14 +85,14 @@
                     <div class="col">
                         <!-- Table Navigation -->
                         <div class="clearfix">
-                            <!--                            <button class="btn btn-primary btn-sm float-left" type="button" data-toggle="modal"
-                                                                data-target="#modalReserve">
-                                                            <i class="fas fa-pen pr-1" aria-hidden="true"></i>Reserve
-                                                        </button>-->
-                            <!--                            <button class="btn btn-primary btn-sm float-left" type="button" data-toggle="modal"-->
-                            <!--                                    data-target="#modalAdd">-->
-                            <!--                                <i class="fas fa-plus pr-1" aria-hidden="true"></i>Add Hostname-->
-                            <!--                            </button>-->
+                            <button type="button" class="btn btn-primary btn-sm float-left" data-toggle="modal"
+                                    data-target="#modalAdd"><i class="fas fa-plus pr-1"
+                                                               aria-hidden="true"></i>Add Hostname
+                            </button>
+                            <button type="button" class="btn btn-primary btn-sm float-left" data-toggle="modal"
+                                    data-target="#modalAllocator"><i class="fas fa-pen pr-1"
+                                                                      aria-hidden="true"></i>Allocator
+                            </button>
                             <button type="button" class="btn btn-primary btn-sm float-left" data-toggle="modal"
                                     data-target="#modalChooseFile"><i class="fas fa-download pr-1"
                                                                       aria-hidden="true"></i>Import
@@ -181,7 +181,7 @@
                                                                  title="Detail"></i></a>
                                     <span data-toggle="modal" data-target="#modalConfirmRelease">
                                         <a><i class="fas fa-times mx-1" data-toggle="tooltip" data-placement="bottom"
-                                          title="Release"></i></a>
+                                              title="Release"></i></a>
                                     </span>
 
                                 </td>
@@ -198,7 +198,7 @@
                                                                  title="Detail"></i></a>
                                     <span data-toggle="modal" data-target="#modalConfirmRelease">
                                         <a><i class="fas fa-times mx-1" data-toggle="tooltip" data-placement="bottom"
-                                          title="Release"></i></a>
+                                              title="Release"></i></a>
                                     </span>
                                 </td>
                                 <td>Central Java</td>
@@ -214,7 +214,7 @@
                                                                  title="Detail"></i></a>
                                     <span data-toggle="modal" data-target="#modalConfirmRelease">
                                         <a><i class="fas fa-times mx-1" data-toggle="tooltip" data-placement="bottom"
-                                          title="Release"></i></a>
+                                              title="Release"></i></a>
                                     </span>
                                 </td>
                                 <td>Central Java</td>
@@ -230,7 +230,7 @@
                                                                  title="Detail"></i></a>
                                     <span data-toggle="modal" data-target="#modalConfirmRelease">
                                         <a><i class="fas fa-times mx-1" data-toggle="tooltip" data-placement="bottom"
-                                          title="Release"></i></a>
+                                              title="Release"></i></a>
                                     </span>
                                 </td>
                                 <td>Central Java</td>
@@ -424,198 +424,78 @@
 </div>
 <!--Modal: modalConfirmRelease-->
 
-<!--Modal: modalEdit-->
-<div class="modal fade bd-example-modal-lg" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalEdit"
+<!--Modal: modalAllocator-->
+<div class="modal fade" id="modalAllocator" tabindex="-1" role="dialog" aria-labelledby="myModalAllocator"
      aria-hidden="true">
-    <div class="modal-dialog cascading-modal modal-lg" role="document">
+    <div class="modal-dialog cascading-modal" role="document">
 
         <!--Content-->
         <div class="modal-content">
 
             <!--Header-->
             <div class="modal-header light-blue darken-3 white-text">
-                <h4 class="title"><i class="fas fa-database"></i>Edit IP Address</h4>
+                <h4 class="title"><i class="fas fa-database"></i>Hostname Allocator</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
 
             <!--Body-->
-            <div class="modal-body mb-0 text-center">
-
-                <div class="form-group row">
-                    <label for="inputArea" class="col-sm-3 col-form-label text-left">Area</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="inputArea" placeholder="Area">
+            <div class="row mx-1">
+                <div class="col-6">
+                    <div class="md-form">
+                        <input type="search" id="form-autocompleteIP" name="form-autocompleteIP"
+                               class="form-control mdb-autocomplete">
+                        <button class="mdb-autocomplete-clear">
+                            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24"
+                                 xmlns="https://www.w3.org/2000/svg">
+                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                            </svg>
+                        </button>
+                        <label for="form-autocompleteIP" class="active">Choose your IP Block</label>
+                        <em><small>Type to enable autosuggest</small></em>
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label for="inputRing" class="col-sm-3 col-form-label text-left">Ring</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="inputRing" placeholder="Ring">
+                <div class="col-6">
+                    <!-- Material input -->
+                    <div class="md-form">
+                        <input type="text" id="inputIPbegin" name="inputIPbegin" class="form-control" disabled
+                               value="10.123.122.1">
+                        <label for="inputIPbegin" class="disabled">Range Begin</label>
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label for="inputHostname" class="col-sm-3 col-form-label text-left">Hostname</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="inputHostname" placeholder="Hostname">
+            </div>
+            <div class="row mx-1">
+                <div class="col-6">
+                    <div class="md-form">
+                        <input type="search" id="form-autocompleteHostname" name="form-autocompleteHostname"
+                               class="form-control mdb-autocomplete">
+                        <button class="mdb-autocomplete-clear">
+                            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24"
+                                 xmlns="https://www.w3.org/2000/svg">
+                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                            </svg>
+                        </button>
+                        <label for="form-autocompleteHostname" class="active">Choose your Hostname</label>
+                        <em><small>Type to enable autosuggest</small></em>
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label for="inputRoutername" class="col-sm-3 col-form-label text-left">Router Name</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="inputRoutername" placeholder="Router Name">
+                <div class="col-6">
+                    <!-- Material input -->
+                    <div class="md-form">
+                        <input type="text" id="inputIPend" name="inputIPend" class="form-control" disabled
+                               value="10.123.122.16">
+                        <label for="inputIPend" class="disabled">Range End</label>
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label for="inputSiteID" class="col-sm-3 col-form-label text-left">Site ID</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="inputSiteID" placeholder="Site ID">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputTowerIndex" class="col-sm-3 col-form-label text-left">Tower Index</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="inputTowerIndex" placeholder="Tower Index">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputSiteName" class="col-sm-3 col-form-label text-left">Site Name</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="inputSiteName" placeholder="Site Name">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputPhase" class="col-sm-3 col-form-label text-left">Phase</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="inputPhase" placeholder="Phase">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputBSC" class="col-sm-3 col-form-label text-left">BSC/RNC/LTE</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="inputBSC" placeholder="BSC/RNC/LTE">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputHUT" class="col-sm-3 col-form-label text-left">HUT</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="inputHUT" placeholder="HUT">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputMicro" class="col-sm-3 col-form-label text-left">Microwave</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="inputMicro" placeholder="Microwave">
-                    </div>
-                </div>
-
-                <hr>
-
-                <div id="abisoam">
-                    <!--                <h3>Abis/IuB/S1</h3>-->
-
-                    <!--                    <div class="container" id="selectOAM">-->
-                    <!--                        &lt;!&ndash;Blue select&ndash;&gt;-->
-                    <!--                <select class="mdb-select md-form colorful-select dropdown-primary">-->
-                    <!--                  <option value="1">Abis/IuB/S1</option>-->
-                    <!--                  <option value="2">OAM</option>-->
-                    <!--                </select>-->
-                    <!--                <label class="mdb-main-label">IP Address</label>-->
-                    <!--                &lt;!&ndash;/Blue select&ndash;&gt;-->
-                    <!--                    </div>-->
-
-                    <select class="mdb-select md-form" id="selectOAM">
-                        <option value="" disabled selected>Choose your IP Address option</option>
-                        <option value="1">Abis/IuB/S1</option>
-                        <option value="2">OAM</option>
-                    </select>
-
-                    <div class="form-group row">
-                        <label for="inputCAPabis" class="col-sm-3 col-form-label text-left">Cap (Kbps)</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="inputCAPabis" placeholder="Cap (Kbps)">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputSVIDabis" class="col-sm-3 col-form-label text-left">S-VID</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="inputSVIDabis" placeholder="S-VID">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputCVIDabis" class="col-sm-3 col-form-label text-left">C-VID</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="inputCVIDabis" placeholder="C-VID">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputIPAddressabis" class="col-sm-3 col-form-label text-left">IP Address</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="inputIPAddressabis" placeholder="IP Address">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputIPGatewayabis" class="col-sm-3 col-form-label text-left">IP Gateway</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="inputIPGatewayabis" placeholder="IP Gateway">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputSubnetabis" class="col-sm-3 col-form-label text-left">Subnet</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="inputSubnetabis" placeholder="Subnet">
-                        </div>
-                    </div>
-
-                    <!--                <hr>-->
-
-                    <!--                <h3>OAM</h3>-->
-                    <!--                <div class="form-group row">-->
-                    <!--                    <label for="inputCAPoam" class="col-sm-3 col-form-label text-left">Cap (Kbps)</label>-->
-                    <!--                    <div class="col-sm-9">-->
-                    <!--                        <input type="text" class="form-control" id="inputCAPoam" placeholder="Cap (Kbps)">-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-                    <!--                <div class="form-group row">-->
-                    <!--                    <label for="inputSVIDoam" class="col-sm-3 col-form-label text-left">S-VID</label>-->
-                    <!--                    <div class="col-sm-9">-->
-                    <!--                        <input type="text" class="form-control" id="inputSVIDoam" placeholder="S-VID">-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-                    <!--                <div class="form-group row">-->
-                    <!--                    <label for="inputCVIDoam" class="col-sm-3 col-form-label text-left">C-VID</label>-->
-                    <!--                    <div class="col-sm-9">-->
-                    <!--                        <input type="text" class="form-control" id="inputCVIDoam" placeholder="C-VID">-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-                    <!--                <div class="form-group row">-->
-                    <!--                    <label for="inputIPAddressoam" class="col-sm-3 col-form-label text-left">IP Address</label>-->
-                    <!--                    <div class="col-sm-9">-->
-                    <!--                        <input type="text" class="form-control" id="inputIPAddressoam" placeholder="IP Address">-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-                    <!--                <div class="form-group row">-->
-                    <!--                    <label for="inputIPGatewayoam" class="col-sm-3 col-form-label text-left">IP Gateway</label>-->
-                    <!--                    <div class="col-sm-9">-->
-                    <!--                        <input type="text" class="form-control" id="inputIPGatewayoam" placeholder="IP Gateway">-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-                    <!--                <div class="form-group row">-->
-                    <!--                    <label for="inputSubnetoam" class="col-sm-3 col-form-label text-left">Subnet</label>-->
-                    <!--                    <div class="col-sm-9">-->
-                    <!--                        <input type="text" class="form-control" id="inputSubnetoam" placeholder="Subnet">-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-                </div>
-
             </div>
 
             <!--Footer-->
             <div class="modal-footer justify-content-center">
-                <a type="button" class="btn btn-primary waves-effect waves-light">Confirm
-                    <i class="fas fa-check-square ml-1"></i>
+                <a type="button" class="btn btn-primary waves-effect waves-light">Allocated
+                    <i class="fas fa-save ml-1"></i>
                 </a>
-                <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Release</a>
                 <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Cancel</a>
             </div>
 
@@ -624,7 +504,7 @@
 
     </div>
 </div>
-<!--Modal: modalEdit-->
+<!--Modal: modalAllocator-->
 
 <!--Modal: modalAdd-->
 <div class="modal fade bd-example-modal-lg" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalEdit"
@@ -636,7 +516,7 @@
 
             <!--Header-->
             <div class="modal-header light-blue darken-3 white-text">
-                <h4 class="title"><i class="fas fa-database"></i>Add IP Address</h4>
+                <h4 class="title"><i class="fas fa-database"></i>Add Hostname</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
@@ -644,151 +524,10 @@
             <!--Body-->
             <div class="modal-body mb-0 text-center">
 
-                <div class="form-group row">
-                    <label for="addArea" class="col-sm-3 col-form-label text-left">Area</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addArea" placeholder="Area">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addRing" class="col-sm-3 col-form-label text-left">Ring</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addRing" placeholder="Ring">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addHostname" class="col-sm-3 col-form-label text-left">Hostname</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addHostname" placeholder="Hostname">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addRoutername" class="col-sm-3 col-form-label text-left">Router Name</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addRoutername" placeholder="Router Name">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addSiteID" class="col-sm-3 col-form-label text-left">Site ID</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addSiteID" placeholder="Site ID">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addTowerIndex" class="col-sm-3 col-form-label text-left">Tower Index</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addTowerIndex" placeholder="Tower Index">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addSiteName" class="col-sm-3 col-form-label text-left">Site Name</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addSiteName" placeholder="Site Name">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addPhase" class="col-sm-3 col-form-label text-left">Phase</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addPhase" placeholder="Phase">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addBSC" class="col-sm-3 col-form-label text-left">BSC/RNC/LTE</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addBSC" placeholder="BSC/RNC/LTE">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addHUT" class="col-sm-3 col-form-label text-left">HUT</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addHUT" placeholder="HUT">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addMicro" class="col-sm-3 col-form-label text-left">Microwave</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addMicro" placeholder="Microwave">
-                    </div>
-                </div>
-
-                <hr>
-
-                <h3>Abis/IuB/S1</h3>
-                <div class="form-group row">
-                    <label for="addCAPabis" class="col-sm-3 col-form-label text-left">Cap (Kbps)</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addCAPabis" placeholder="Cap (Kbps)">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addSVIDabis" class="col-sm-3 col-form-label text-left">S-VID</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addSVIDabis" placeholder="S-VID">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addCVIDabis" class="col-sm-3 col-form-label text-left">C-VID</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addCVIDabis" placeholder="C-VID">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addIPAddressabis" class="col-sm-3 col-form-label text-left">IP Address</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addIPAddressabis" placeholder="IP Address">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addIPGatewayabis" class="col-sm-3 col-form-label text-left">IP Gateway</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addIPGatewayabis" placeholder="IP Gateway">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addSubnetabis" class="col-sm-3 col-form-label text-left">Subnet</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addSubnetabis" placeholder="Subnet">
-                    </div>
-                </div>
-
-                <hr>
-
-                <h3>OAM</h3>
-                <div class="form-group row">
-                    <label for="addCAPoam" class="col-sm-3 col-form-label text-left">Cap (Kbps)</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addCAPoam" placeholder="Cap (Kbps)">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addSVIDoam" class="col-sm-3 col-form-label text-left">S-VID</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addSVIDoam" placeholder="S-VID">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addCVIDoam" class="col-sm-3 col-form-label text-left">C-VID</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addCVIDoam" placeholder="C-VID">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addIPAddressoam" class="col-sm-3 col-form-label text-left">IP Address</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addIPAddressoam" placeholder="IP Address">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addIPGatewayoam" class="col-sm-3 col-form-label text-left">IP Gateway</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addIPGatewayoam" placeholder="IP Gateway">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="addSubnetoam" class="col-sm-3 col-form-label text-left">Subnet</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="addSubnetoam" placeholder="Subnet">
-                    </div>
+                <!-- Large outline input -->
+                <div class="md-form md-outline form-lg">
+                    <input id="form-lg" class="form-control form-control-lg" type="text">
+                    <label for="form-lg">Type your hostname</label>
                 </div>
 
             </div>
@@ -838,88 +577,6 @@
 </div>
 <!--Modal: modalAlreadyEdit-->
 
-<!--Modal: modalReserve-->
-<!--<div class="modal fade" id="modalReserve" tabindex="-1" role="dialog" aria-labelledby="myModalReserve"
-     aria-hidden="true">
-    <div class="modal-dialog cascading-modal" role="document">
-
-        &lt;!&ndash;Content&ndash;&gt;
-        <div class="modal-content">
-
-            &lt;!&ndash;Header&ndash;&gt;
-            <div class="modal-header light-blue darken-3 white-text">
-                <h4 class="title"><i class="fas fa-database"></i>Reserve by Hostname</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-            </div>
-
-            &lt;!&ndash;Body&ndash;&gt;
-            <div class="row mx-1">
-                <div class="col-6">
-                    <div class="md-form">
-                        <input type="search" id="form-autocompleteIP" name="form-autocompleteIP"
-                               class="form-control mdb-autocomplete">
-                        <button class="mdb-autocomplete-clear">
-                            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24"
-                                 xmlns="https://www.w3.org/2000/svg">
-                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-                                <path d="M0 0h24v24H0z" fill="none"/>
-                            </svg>
-                        </button>
-                        <label for="form-autocompleteIP" class="active">Choose your IP Block</label>
-                        <em><small>Type to enable autosuggest</small></em>
-                    </div>
-                </div>
-                <div class="col-6">
-                    &lt;!&ndash; Material input &ndash;&gt;
-                    <div class="md-form">
-                        <input type="text" id="inputIPbegin" name="inputIPbegin" class="form-control" disabled
-                               value="10.123.122.1">
-                        <label for="inputIPbegin" class="disabled">Range Begin</label>
-                    </div>
-                </div>
-            </div>
-            <div class="row mx-1">
-                <div class="col-6">
-                    <div class="md-form">
-                        <input type="search" id="form-autocompleteHostname" name="form-autocompleteHostname"
-                               class="form-control mdb-autocomplete">
-                        <button class="mdb-autocomplete-clear">
-                            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24"
-                                 xmlns="https://www.w3.org/2000/svg">
-                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-                                <path d="M0 0h24v24H0z" fill="none"/>
-                            </svg>
-                        </button>
-                        <label for="form-autocompleteHostname" class="active">Choose your Hostname</label>
-                        <em><small>Type to enable autosuggest</small></em>
-                    </div>
-                </div>
-                <div class="col-6">
-                    &lt;!&ndash; Material input &ndash;&gt;
-                    <div class="md-form">
-                        <input type="text" id="inputIPend" name="inputIPend" class="form-control" disabled
-                               value="10.123.122.16">
-                        <label for="inputIPend" class="disabled">Range End</label>
-                    </div>
-                </div>
-            </div>
-
-            &lt;!&ndash;Footer&ndash;&gt;
-            <div class="modal-footer justify-content-center">
-                <a type="button" class="btn btn-primary waves-effect waves-light">Reserve
-                    <i class="fas fa-save ml-1"></i>
-                </a>
-                <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Cancel</a>
-            </div>
-
-        </div>
-        &lt;!&ndash;/.Content&ndash;&gt;
-
-    </div>
-</div-->>
-<!--Modal: modalReserve-->
-
 <!-- Footer -->
 <!-- Footer -->
 
@@ -934,8 +591,6 @@
 <script type="text/javascript" src="js/mdb.min.js"></script>
 <!-- MDBootstrap Datatables  -->
 <script type="text/javascript" src="js/addons/datatables.min.js"></script>
-<!-- Device42 script -->
-<script type="text/javascript" src="/js/addons/custom_change_list.js"></script>
 
 
 <!-- MDBootstrap tables  -->
@@ -976,7 +631,7 @@
 
 </script>
 
-// Tooltips Initialization
+<!--Tooltips Initialization-->
 <script>
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
@@ -1030,6 +685,7 @@
         data: states
     });
 </script>
+
 </body>
 
 </html>
