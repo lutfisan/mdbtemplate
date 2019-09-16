@@ -128,8 +128,70 @@
         <input type='text' class='addr' id='q3'> .
         <input type='text' class='addr' id='q4'> /
         <input type='text' class='addr' id='cidr'>
-        <button class="button" onclick='calculate();'>Calculate</button>
+        <button class="button" data-toggle="modal"
+        data-target="#modalConfirmpush" onclick='calculate();'>Calculate</button>
 
+<!--Modal: modalConfirmDelete-->
+<div class="modal fade" id="modalConfirmpush" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-notify modal-success" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">Are you sure?</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        
+          <i class="fas fa-check fa-4x mb-3 animated rotateIn"></i>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal"
+        data-target="#modalConfirmdb">Yes </a>
+        <a type="button" class="btn btn-outline-success waves-effect" data-dismiss="modal">No</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: modalConfirmDelete-->
+
+
+
+<!-- Modal confirm push database -->
+<div class="modal fade" id="modalConfirmdb" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+
+  <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+  <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          
+        </button>
+      </div>
+      <div class="modal-body">
+        Your data has been update
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal confirm push database -->
 
         <hr>
         <div class='result'>
