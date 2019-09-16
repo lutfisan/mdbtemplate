@@ -175,3 +175,7 @@ bido{
   margin-right: auto;
   width: 50%;
 }
+
+.alert{
+    display: none;
+}
