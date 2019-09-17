@@ -253,7 +253,21 @@
                     <div class="col-md-12">
                         <select class="mdb-select colorful-select dropdown-primary md-form"
                                 searchable="Search here..."
-                                id="filterUser">
+                                id="filterTower">
+                            <option value="0" selected>All</option>
+                            <option value="1">JAW-JI-KPN-1227</option>
+                            <option value="2">JAW-JI-SDA-2905</option>
+                            <option value="3">JAW-JI-SDA-2955</option>
+                        </select>
+                        <label class="mdb-main-label">By Tower Index</label>
+                    </div>
+                </div>
+
+                <div class="row mx-auto">
+                    <div class="col-md-12">
+                        <select class="mdb-select colorful-select dropdown-primary md-form"
+                                searchable="Search here..."
+                                id="filterGateway">
                             <option value="0" selected>All</option>
                             <option value="1">10.10.10.1</option>
                             <option value="2">10.10.10.2</option>
@@ -291,7 +305,7 @@
                     </div>
                 </div>
 
-                <div class="row mx-auto">
+                <div class="row mx-auto text-center">
                     <div class="col">
                         <button type="submit" class="btn btn-success btn-sm btn-rounded"><i
                                 class="fas fa-plane pr-2 pt-1" aria-hidden="true"></i>Submit
@@ -905,14 +919,10 @@
 
     $('#abisoam input').prop('readonly', true);
 
-    $('#filterArea').materialSelect();
-    $('#filterRing').materialSelect();
-    $('#filterHostname').materialSelect();
-    $('#filterUser').materialSelect();
+    $('#filterTower').materialSelect();
+    $('#filterGateway').materialSelect();
     $('#filterStatus').materialSelect();
     $('#filterUpdate').materialSelect();
-
-
 
 </script>
 
