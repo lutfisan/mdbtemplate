@@ -175,3 +175,8 @@ bido{
   margin-right: auto;
   width: 50%;
 }
+
+.filter-container {
+  width: 200px;
+  @include make-container();
+}
