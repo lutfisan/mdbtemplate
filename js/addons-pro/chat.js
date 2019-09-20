@@ -6,13 +6,13 @@ $('#chat').on('click', function () {
 
     $myForm.css('display', 'block');
     $myForm.removeClass('slim');
-  };
-})
+  }
+});
 
 $('#closeButton').not('#toggle').on('click', function () {
 
   $myForm.hide();
-})
+});
 
 $("#toggle").on('click', function () {
 

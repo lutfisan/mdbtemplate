@@ -97,10 +97,11 @@
                     <div class="col">
                         <!-- Table Navigation -->
                         <div class="clearfix">
-                            <button class="btn btn-primary btn-sm float-left" type="button" data-toggle="modal"
+                           <!-- <button class="btn btn-primary btn-sm float-left" type="button" data-toggle="modal"
                                     data-target="#modalReserve">
                                 <i class="fas fa-pen pr-1" aria-hidden="true"></i>Reserve
-                            </button>
+                            </button>-->
+                            <a class="btn btn-primary btn-sm float-left" onclick="toastr.success('<p><strong>Congratulation!</strong> This hostname already reserved by you</p>');"><i class="fas fa-pen pr-1" aria-hidden="true"></i>Reserve</a>
                             <button class="btn btn-danger btn-sm float-left" type="button" data-toggle="modal"
                                     data-target="#modalConfirmRelease">
                                 <i class="fas fa-sign-out-alt pr-1" aria-hidden="true"></i>Release
@@ -678,8 +679,6 @@
 <script type="text/javascript" src="js/mdb.min.js"></script>
 <!-- MDBootstrap Datatables  -->
 <script type="text/javascript" src="js/addons/datatables.min.js"></script>
-<!-- Device42 script -->
-<script type="text/javascript" src="/js/addons/custom_change_list.js"></script>
 
 
 <!-- MDBootstrap tables  -->

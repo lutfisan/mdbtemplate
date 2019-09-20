@@ -294,7 +294,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           });
         }
 
-        ;
         this.$nativeSelect.append($newOption);
       }
     }, {
