@@ -79,7 +79,7 @@
       let text = '';
       const charset = 'abcdefghijklmnopqrstuvwxyz123456789';
 
-      for (let i = 0; i < Number(letter); i++) {
+      for (let i = 0; i < new Number(letter); i++) {
         text += charset.charAt(Math.floor(Math.random() * charset.length));
       }
       return text;

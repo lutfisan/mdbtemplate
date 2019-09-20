@@ -94,7 +94,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }
 
         if (this.options.destroy) {
+          var $btnSave = this.$nativeSelect.parent().find('button.btn-save').length ? this.$nativeSelect.parent().find('button.btn-save') : false;
           this.$nativeSelect.data('select-id', null).removeClass('initialized');
+          this.$nativeSelect.parent().append($btnSave);
           return;
         }
 
@@ -292,6 +294,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           });
         }
 
+        ;
         this.$nativeSelect.append($newOption);
       }
     }, {
