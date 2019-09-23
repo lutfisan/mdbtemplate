@@ -460,7 +460,7 @@
 
 <!--Modal: modalEdit-->
 <div class="modal fade bd-example-modal-lg" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalEdit"
-     aria-hidden="true">
+     aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog cascading-modal modal-lg" role="document">
 
         <!--Content-->
@@ -995,6 +995,7 @@
         $('#dtIPAddress_wrapper .dataTables_filter').find('label').remove();
 
         $('#selectOAM').materialSelect();
+
     });
 
     $('#dtSearch').mdbDropSearch();

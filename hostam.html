@@ -104,7 +104,7 @@
                             </button>
                             <button type="button" class="btn btn-primary btn-sm float-left" data-toggle="modal"
                                     data-target="#modalAllocator"><i class="fas fa-pen pr-1"
-                                                                      aria-hidden="true"></i>Allocator
+                                                                     aria-hidden="true"></i>Allocator
                             </button>
                             <button type="button" class="btn btn-primary btn-sm float-left" data-toggle="modal"
                                     data-target="#modalChooseFile"><i class="fas fa-download pr-1"
@@ -190,8 +190,8 @@
                             <tr>
                                 <td class="text-center">
                                     <a href="towerdetail.html"><i class="fas fa-info mx-1" data-toggle="tooltip"
-                                                                 data-placement="bottom"
-                                                                 title="Detail"></i></a>
+                                                                  data-placement="bottom"
+                                                                  title="Detail"></i></a>
                                     <span data-toggle="modal" data-target="#modalConfirmRelease">
                                         <a><i class="fas fa-times mx-1" data-toggle="tooltip" data-placement="bottom"
                                               title="Release"></i></a>
@@ -207,8 +207,8 @@
                             <tr>
                                 <td class="text-center">
                                     <a href="towerdetail.html"><i class="fas fa-info mx-1" data-toggle="tooltip"
-                                                                 data-placement="bottom"
-                                                                 title="Detail"></i></a>
+                                                                  data-placement="bottom"
+                                                                  title="Detail"></i></a>
                                     <span data-toggle="modal" data-target="#modalConfirmRelease">
                                         <a><i class="fas fa-times mx-1" data-toggle="tooltip" data-placement="bottom"
                                               title="Release"></i></a>
@@ -223,8 +223,8 @@
                             <tr>
                                 <td class="text-center">
                                     <a href="towerdetail.html"><i class="fas fa-info mx-1" data-toggle="tooltip"
-                                                                 data-placement="bottom"
-                                                                 title="Detail"></i></a>
+                                                                  data-placement="bottom"
+                                                                  title="Detail"></i></a>
                                     <span data-toggle="modal" data-target="#modalConfirmRelease">
                                         <a><i class="fas fa-times mx-1" data-toggle="tooltip" data-placement="bottom"
                                               title="Release"></i></a>
@@ -239,8 +239,8 @@
                             <tr>
                                 <td class="text-center">
                                     <a href="towerdetail.html"><i class="fas fa-info mx-1" data-toggle="tooltip"
-                                                                 data-placement="bottom"
-                                                                 title="Detail"></i></a>
+                                                                  data-placement="bottom"
+                                                                  title="Detail"></i></a>
                                     <span data-toggle="modal" data-target="#modalConfirmRelease">
                                         <a><i class="fas fa-times mx-1" data-toggle="tooltip" data-placement="bottom"
                                               title="Release"></i></a>
@@ -454,9 +454,10 @@
 
             <!--Body-->
             <div class="row mx-1">
-                <div class="col-6">
+                <div class="col-5">
                     <div class="md-form">
-                        <input type="search" id="form-autocompleteIP" name="form-autocompleteIP"
+                        <input type="text" id="form-autocompleteIP" name="form-autocompleteIP"
+                               aria-describedby="inputHelpInIP"
                                class="form-control mdb-autocomplete">
                         <button class="mdb-autocomplete-clear">
                             <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24"
@@ -467,7 +468,13 @@
                             </svg>
                         </button>
                         <label for="form-autocompleteIP" class="active">Choose your IP Block</label>
-                        <em><small>Type to enable autosuggest</small></em>
+                        <em id="inputHelpInIP"><small>Type to enable autosuggest</small></em>
+                    </div>
+                </div>
+                <div class="col-1 ml-0 pl-0">
+                    <div class="md-form">
+                        <input type="text" id="inputMax" name="inputMax" class="form-control">
+                        <label for="inputMax">Maks</label>
                     </div>
                 </div>
                 <div class="col-6">
@@ -481,8 +488,28 @@
             </div>
             <div class="row mx-1">
                 <div class="col-6">
+                    <!--Blue select-->
+                    <select id="oamabis" class="mdb-select md-form colorful-select dropdown-primary">
+                        <option value="1">Abis</option>
+                        <option value="2">OAM</option>
+                    </select>
+                    <label class="mdb-main-label">Select IP for Abis / OAM</label>
+                    <!--/Blue select-->
+                </div>
+                <div class="col-6">
+                    <!-- Material input -->
                     <div class="md-form">
-                        <input type="search" id="form-autocompleteHostname" name="form-autocompleteHostname"
+                        <input type="text" id="inputIPend" name="inputIPend" class="form-control" disabled
+                               value="10.123.122.16">
+                        <label for="inputIPend" class="disabled">Range End</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-1">
+                <div class="col-6">
+                    <div class="md-form">
+                        <input type="text" id="form-autocompleteHostname" name="form-autocompleteHostname"
+                               aria-describedby="inputHelpInHostname"
                                class="form-control mdb-autocomplete">
                         <button class="mdb-autocomplete-clear">
                             <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24"
@@ -493,17 +520,10 @@
                             </svg>
                         </button>
                         <label for="form-autocompleteHostname" class="active">Choose your Hostname</label>
-                        <em><small>Type to enable autosuggest</small></em>
+                        <em id="inputHelpInHostname"><small>Type to enable autosuggest</small></em>
                     </div>
                 </div>
-                <div class="col-6">
-                    <!-- Material input -->
-                    <div class="md-form">
-                        <input type="text" id="inputIPend" name="inputIPend" class="form-control" disabled
-                               value="10.123.122.16">
-                        <label for="inputIPend" class="disabled">Range End</label>
-                    </div>
-                </div>
+
             </div>
 
             <!--Footer-->
@@ -643,6 +663,8 @@
     $('#filterUser').materialSelect();
     $('#filterStatus').materialSelect();
     $('#filterUpdate').materialSelect();
+
+    $('#oamabis').materialSelect();
 
 </script>
 

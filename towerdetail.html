@@ -126,7 +126,7 @@
                                 data-show-columns="false"
                                 data-pagination="true"
                                 data-page-list="[10, 25, 50, 100, all]">
-                            <!--                data-url="data/dtBeforeAfter.json">-->
+<!--                                            data-url="data/dtBeforeAfter.json">-->
 
                             <thead>
                             <tr>
@@ -145,19 +145,20 @@
                                     Microwave Link
                                 </th>
 
-                                <th class="text-center" colspan="12">Abis</th>
-                                <th class="text-center" colspan="12">OAM</th>
+                                <th class="text-center" colspan="14">Abis</th>
+                                <th class="text-center" colspan="14">OAM</th>
                             </tr>
                             <tr>
-                                <th class="text-center yellow lighten-1" colspan="6">Before</th>
-                                <th class="text-center light-green accent-2" colspan="6">After</th>
-                                <th class="text-center yellow lighten-1" colspan="6">Before</th>
-                                <th class="text-center light-green accent-2" colspan="6">After</th>
+                                <th class="text-center yellow lighten-1" colspan="7">Before</th>
+                                <th class="text-center light-green accent-2" colspan="7">After</th>
+                                <th class="text-center yellow lighten-1" colspan="7">Before</th>
+                                <th class="text-center light-green accent-2" colspan="7">After</th>
                             </tr>
                             <tr>
                                 <th class="yellow lighten-1" data-field="abis_b_hostName" data-sortable="true">Host Name</th>
                                 <th class="yellow lighten-1" data-field="abis_b_routerName" data-sortable="true">Router Name</th>
                                 <th class="yellow lighten-1" data-field="abis_b_vlan" data-sortable="true">VLAN</th>
+                                <th class="yellow lighten-1" data-field="abis_b_cap" data-sortable="true">Cap</th>
                                 <th class="yellow lighten-1" data-field="abis_b_ipAddress" data-sortable="true">IP Address</th>
                                 <th class="yellow lighten-1" data-field="abis_b_ipGateway" data-sortable="true">IP Gateway</th>
                                 <th class="yellow lighten-1" data-field="abis_b_subnet" data-sortable="true">Subnet</th>
@@ -165,6 +166,7 @@
                                 <th class="light-green accent-2" data-field="abis_a_hostName" data-sortable="true">Host Name</th>
                                 <th class="light-green accent-2" data-field="abis_a_routerName" data-sortable="true">Router Name</th>
                                 <th class="light-green accent-2" data-field="abis_a_vlan" data-sortable="true">VLAN</th>
+                                <th class="light-green accent-2" data-field="abis_a_cap" data-sortable="true">Cap</th>
                                 <th class="light-green accent-2" data-field="abis_a_ipAddress" data-sortable="true">IP Address</th>
                                 <th class="light-green accent-2" data-field="abis_a_ipGateway" data-sortable="true">IP Gateway</th>
                                 <th class="light-green accent-2" data-field="abis_a_subnet" data-sortable="true">Subnet</th>
@@ -172,6 +174,7 @@
                                 <th class="yellow lighten-1" data-field="oam_b_hostName" data-sortable="true">Host Name</th>
                                 <th class="yellow lighten-1" data-field="oam_b_routerName" data-sortable="true">Router Name</th>
                                 <th class="yellow lighten-1" data-field="oam_b_vlan" data-sortable="true">VLAN</th>
+                                <th class="yellow lighten-1" data-field="oam_b_cap" data-sortable="true">Cap</th>
                                 <th class="yellow lighten-1" data-field="oam_b_ipAddress" data-sortable="true">IP Address</th>
                                 <th class="yellow lighten-1" data-field="oam_b_ipGateway" data-sortable="true">IP Gateway</th>
                                 <th class="yellow lighten-1" data-field="oam_b_subnet" data-sortable="true">Subnet</th>
@@ -179,6 +182,7 @@
                                 <th class="light-green accent-2" data-field="oam_a_hostName" data-sortable="true">Host Name</th>
                                 <th class="light-green accent-2" data-field="oam_a_routerName" data-sortable="true">Router Name</th>
                                 <th class="light-green accent-2" data-field="oam_a_vlan" data-sortable="true">VLAN</th>
+                                <th class="light-green accent-2" data-field="oam_a_cap" data-sortable="true">Cap</th>
                                 <th class="light-green accent-2" data-field="oam_a_ipAddress" data-sortable="true">IP Address</th>
                                 <th class="light-green accent-2" data-field="oam_a_ipGateway" data-sortable="true">IP Gateway</th>
                                 <th class="light-green accent-2" data-field="oam_a_subnet" data-sortable="true">Subnet</th>
@@ -212,6 +216,10 @@
                                 <td>10.116.204.19</td>
                                 <td>10.116.204.17</td>
                                 <td>255.255.255.240</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -488,9 +496,9 @@
 <!--Modal: modalConfirmRelease-->
 
 <!--Modal: modalEdit-->
-<div class="modal fade bd-example-modal-lg" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalEdit"
-     aria-hidden="true">
-    <div class="modal-dialog cascading-modal modal-lg" role="document">
+<div class="modal fade left bd-example-modal-lg" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalEdit"
+     aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-full-height modal-left" role="document">
 
         <!--Content-->
         <div class="modal-content">
