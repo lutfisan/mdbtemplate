@@ -370,9 +370,19 @@
                     bcBinary += bcBlockBinary;
                     net += parseInt(netBlockBinary, 2);
                     bc += parseInt(bcBlockBinary, 2);
-                    rangeA += (parseInt(netBlockBinary, 2) + 1);
-                    rangeB += (parseInt(bcBlockBinary, 2) - 1);
-                } else {
+                    rangeA += parseInt(netBlockBinary, 2) ;
+                    rangeB += parseInt(bcBlockBinary, 2) ;
+                } else if (importantBlock == i) {
+                    //the important block.
+                    mask += maskBlock;
+                    maskBinary += maskBinaryBlock;
+                    netBinary += netBlockBinary;
+                    bcBinary += bcBlockBinary;
+                    net += parseInt(netBlockBinary, 3);
+                    bc += parseInt(bcBlockBinary, 3);
+                    rangeA += parseInt(netBlockBinary, 3) ;
+                    rangeB += parseInt(bcBlockBinary, 3) ;
+                } else{
                     //block after the important block.
                     mask += 0;
                     maskBinary += "00000000";
